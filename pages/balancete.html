@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Balancete</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/balancete.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> É um relatório sintético que analisa as movimentações financeiras com base no plano de contas e mostra todas as movimentações dos planos de contas cadastrados no sistema, como receitas, despesas e movimentações financeiras. Por ser um sistema de gestão, é o mais proximo que o sistema chega de um relatório de lucro x prejuízo, mas não é um relatório de lucro de fato, pois esse normalmente é gerado pela contabilidade da empresa. <br>
+            <br>
+            <strong>Data inicial | Data final:</strong> Data base para gerar o relatório. <br>
+            <strong>Mostrar últimos períodos:</strong> Define os períodos apresentados, baseado no período marcado no checkbox. <br>
+            <strong>Lançamentos a mostrar:</strong> <br>
+             <br>
+            0 - (Irá considerar todas as movimentações feitas) <br>
+            1 - (Irá considerar todas as movimentações feitas + os títulos em aberto do CR e CP) <br>
+            2 - (Irá considerar somente os títulos do CR e CP abertos e liquidados) <br>
+
+            <strong>Conta(s) corrente:</strong> Define as contas que serão apresentadas. <br>
+            <strong>Plano contas nível:</strong> Apresentará as contas por nível, sintético ou analítico. <br>
+            <strong>Forçar recálculo saldos:</strong> Recalcula os saldos <br>
+            <strong>mostrar comparativo % de colunas:</strong> Apresentará a comparação de um período com o outro (horizontal). <br>
+            <strong>mostrar comparativo % de grupos:</strong> Apresentará a comparação entre as contas analíticas (vertical). <br>
+            <strong>Período contas pagar/receber/comissão por emissão:</strong> Irá considerar os títulos por data de emissão, não por data de vencimento. <br>
+            <strong>Corrigir períodos anteriores pela inflação média:</strong> (CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > INFLAÇÕES ÚLTIMOS ANOS). <br>
+            <strong>Fórmulas com cálculo entre contas:</strong> @1 = receita | @2 = despesa. EX: Resultado = @1 - 2@ (receita - despesas). <br>
+        </p>
+    </article>
+</body>
+</html>

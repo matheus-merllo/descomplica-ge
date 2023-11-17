@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Infraestrutura</span>
+    </header>
+
+    <strong> <center>Servidor web</center> </strong>
+    <article>
+        <p class="info"> 
+            Os responsáveis pelo servidor web são: Gabriel, Marcus, Vinícius Paraíba e Whelbert. <br>
+            <br>
+            Pra saber se um cliente é WEB, devemos abrir o cadastro dele no FZ e verificar o campo "infraestrutura" que deverá conter "Zen/Web" e o campo "Máx.usr" que indicará o número máximo de usuários do cliente. O arquivo ZSL que contém a informação de quantos usuários podem acessar. <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O certificado só pode ser instalado por um técnico para a versão WEB. <br>
+            <br>
+            Nós somos responsáveis po configurar o e-mail da versão GE. Deve estar consigurado (CADASTROS > CONFIGURAÇÕES GERAIS > CONFIGURAÇÕES EMAIL) e no cadastro do usuário nos campos "eMail" e "Senha eMail". O sistema só pode ser entregue ao cliente com todas as rotinas de Email funcionais. <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O link para acessar o GE WEB em qualquer pc: zsl.com.br/baixar/geweb.
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Pegar backup e descompactar para análise na Zênite:</center> </strong>
+    <article>
+        <p class="info">
+            <strong>1ª forma:</strong> <br>
+            <br>
+            Pegando o bkp: <br>
+            - Acessar remotamente o computador o cliente e seguir o passo a passo abaixo, ou, orientá-lo: <br>
+            - No GE acessar o menu “? > Backup de Dados > Enviar p/Zênite > OK” na mensagem de confirmação, selecionar se deseja bkp resumido ou não > Digitar a senha do dia que será obtida no mural do FZ > Aguardar a mensagem de confirmação “Arquivo Enviado”. <br>
+            <br>
+            Descompactando o bkp: <br>
+            - Acessar o FZ > menu “Suporte” > Opção “FTP/Clientes” > Selecionar o bkp do cliente desejado > Clicar no botão “Baixar arquivo(s)/Descompactar” > Aguardar a mensagem de confirmação “1 arquivos baixados” <br>
+            <br>
+            O bkp estará na pasta no T:\Graficas\Analise\(Código do Cli no FZ) já descompactado, sendo necessário, colocar apenas o executável do sistema para conseguir abri-lo.
+            Imediatamente renomeio a pasta do bkp para que caso algum novo seja baixo do FTP, ele não seja substituído. <br>
+            <br>
+            <br>
+            <strong>2ª forma</strong> <br>
+            <br>
+            Pegando o bkp: <br>
+            -Acessar remotamente o computador o cliente, transferir o arquivo de bkp para a pasta do cliente no “Análise” que você criou, e seguir o passo a passo abaixo: <br>
+            <br>
+            -Coloque na mesma pasta os seguintes arquivos: <br>
+            * Executável (GE.exe – zsl.com.br/baixar/geupd – Obs.: lembrar de extrair); <br>
+            * Pkzip (Pkzip.exe – zsl.com.br/baixar/pkzipc); <br>
+            * ZSL (solicitar à gerência); <br>
+            <br>
+            Descompactando o bkp: <br>
+            - Abrir o GE e logar com o usuário ZSL <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Pode acontecer de ao abrir o GE demorar muito ou dar erro, devido ao diretório “T:\” estar travando, então, recorte a pasta e tente na sua área de trabalho ou no Disco Local C:\, e depois de extraído, devolva ao diretório  “T:\”; <br>
+            <br>
+            - Criar o usuário padrão da Zênite de análise: Usuário: zenite – Senha: zsl; e logar com o mesmo. <br>
+            <br>
+            - Acessar o menu “?” > Opção “Backup de Dados” > Aba “Restauração Total de Dados” > Selecionar no quadro da esquerda o caminho do bkp que a desejamos restaurar > Clicar em “Iniciar Restauração Total” > Clicar em “Sim” na mensagem de confirmação <br>
+            <br>
+            - Reindexar o sistema todo; <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Arquivos do sistema</center> </strong>
+    <article>
+        <p class="info"> <br> 
+            A pasta "IX" contém uma cópia dos arquivos do sistema. <br>
+            <br>
+            ZSL-Rep.ZDF: É responsável pelos registros de relatórios, layouts, protocolos e rótulos. <br>
+            <br> 
+            O arquivo "pkzipc" é responsável por compactar e descompactar os arquivos do sistema. <br>
+            <br> 
+            O arquivo "geupd" irá gerar o executável do sistema e é responsável por executar os arquivos que compõem a base de dados do sistema. <br>
+            <br> 
+            O arquivo GE.exe é responsável pelas releases do sistema.  <br>
+            <br> 
+            O arquivo "zupd" é responsável por garantir que o GE sempre esteja aberto e em execução pelo servidor. <br>
+            <br> 
+            GE.ZSL Contém as informações de liberação do cliente com a Zênite, além de alguns dados do cliente. O arquivo ficará slavo no seguinte caminho: "T:\Graficas\ZSL". O arquivo deverá ser renomeado para "GE.ZSL". <br>
+            <br> 
+            NFeservers4.ini é o arquivo onde o sistema guarda/salva todos os links da SEFAZ <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Pessoas que podem gerar arquivos .ZSL: <br>
+            João(principal); Gabriel; Mariana; Simone, Layra, Juliana.
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Arquivo para derrubar usuário do sistema</center> </strong>
+    <article>
+        <p class="info">
+            Crie um TXT com o nome "stop" e com o conteúdo "Shutdown" e cole dentro da pasta do sistema e abrir o sistema novamente.
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Instalação de dll</center> </strong>
+    <article>
+        <p class="info">
+            1 - Fazer download através do link: < zsl.com.br/baixar/nfedll > <br>
+            2 - Extrair e colar o conteúdo baixado, nas seguintes pastas: <br>
+             - C:\Windows\System32 <br>
+             - C:\Windows\SysWOW64 <br>
+            3 - Execute o arquivo "nfedll" como administrador e dar 'ok' nas mensagens que aparecerem no prompt. </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Erro de data/hora</center> </strong>
+    <article>
+        <p class="info">
+            Esse erro acontece quando o servidor ou alguma das estações estão com a hora e/ou data erradas. <br>
+            <br>
+            Número de referência = antes do ponto (número do cliente cadastrado na Zênite). Depois do ponto (número de referência). <br>
+             1 - Abra o menu de senhas no FZ e identifique a empresa do cliente através da coluna "Cód.cli". <br>
+             2 - Insira o código de referência do cliente na coluna "N.Ref". <br>
+             3 - Selecione o tipo de senha e o motivo. Após isso, a senha será gerada na coluna "Senha". <br>
+             4 - Após inserir a senha no sistema do cliente, clique em "OK, senha fornecida". <br>
+             <br>
+             <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> A senha de habilitação é gerada da mesma forma!!!
+    </article>
+
+    <hr>
+
+    <strong> <center>Atualizar sistema</center> </strong>
+    <article>
+        <p class="info">
+            1 - Deverá ser feita pelo servidor. <br>
+            2 - Todos os usuário deverão estar desconectados. <br>
+            <br>
+            O processo pode ser feito automaticamento ou manualmente. Para atualizar o sistema manualmente: <br>
+            1 - Baixe o arquivo: zsl.com.br/baixar/geupd <br>
+            2 - Extraia os arquivos e cole dentro da pasta do sistema <br>
+            3 - Execute o GE. <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>NFe</center> </strong>
+    <article>
+        <p class="info">
+            (Pesquisar no Windows > opções da internet > conteúdo > Limpar estado SSL) Limpa os caches da máquina. É usado para tentar resolver envio de NFs <br>
+            (Pesquisar no Windows > opções da internet > Avançado > Limpar estado SSL) > “marque as opções” Usar SSL 3.0 e TLS 1.1, 1.2… Quanto mais recentes melhor! <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Encerrar vários GE's abertos</center> </strong>
+    <article>
+        <p class="info">
+            Cole o arquivo "encerrar GE.bat" e execute para fechar todos os GE's abertos
+        </p>
+    </article>
+
+    <hr>
+</body>
+</html>

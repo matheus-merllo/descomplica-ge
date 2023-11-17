@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Mapa do PCP</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/mapa-pcp.jpg" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> 
+            O mapa PCP é uma tela restrita e só deve ser utilizada por um usuário por vez <br>
+            <br>
+            Na primeira tabela aparecerão todas as OS no PCP. <br>
+            Na segunda tabela aparecerão todas as etapas da OS selecionada, incluindo as terceirizadas <br>
+            Abaixo da segunda tabela, aparecerão as especificações das etapas <br>
+            <strong>Cores:</strong> Amarelo (Parado/ocioso), Verde escuro (Acerto), Verde claro (Em produção), Branco (Não utilizado)
+            <br>
+            <br>
+            <strong>Início calc:</strong> Começa a calcular o tempo ao iniciar a primeira etapa	 <br>
+            <strong>Fim cálc:</strong> Acabará o cálculo do tempo no final da última etapa <br>
+            <strong>Status:</strong> Verde (dentro do prazo), vermelho (atraso em dias), amarelo (atraso em horas com entrega no mesmo dia) <br>
+            <strong>Início previsto:</strong> Determina uma data para o início da produção  <br>
+            <strong>Forçar início:</strong> Sim (Habilita a data informada) <br>
+            <strong>Departamento:</strong> É possível alterar o departamento da produção <br>
+            <strong>Et(s) precedente:</strong> Permite informar a etapa que precede o processo <br>
+            <strong>Pessoas:</strong> Mostra o número de pessoas necessárias para a etapa. É importado do cadastro da máquina ou do cadastro do cálculo <br>
+            <strong>Cads:</strong> Número de cadernos do serviço <br>
+            <strong>Entr:</strong> Número de entradas. Se for "0", significa que o serviço só terá uma entrada. <br>
+            <strong>Impressões:</strong> Número de impressões da etapa <br>
+            <strong>Realizado:</strong> Indica a % referente à etapa <br>
+            <strong>Situação:</strong> Indica a situação da etapa. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Caso algum apontamento seja finalizado erroneamente, pode-se voltar a situação deve para resolver a situação <br>
+            <strong>Iniciar em/início efetivo:</strong> Indica o início efetivo (ao começar a produção no apontamento) <br>
+            <strong>Secar:</strong> Indica um tempo entre as etapas. O tempo padrão é de 5 minutos. <br>
+            <strong>Sobrepor:</strong> Possibilita começar uma etapa antes da finalização total da etapa que a precede. O % é indicado neste campo <br>
+            <strong>Observações:</strong> Pode vir de dentro das etapas da OS "observações p/ PCP" ou inserido manualmente. Vão para os apontamentos. <br>
+            <br>
+        </p>
+        <br>
+            <strong> <center>Menu inferior</center> </strong>
+        <p class="desc">
+            <strong>Calcular:</strong> Calcula e lança a nova ordem no mapa do PCP caso haja alteração, o mapa sempre deverá ser calculada <br>
+            <strong>Baixar PCP:</strong> Após a conclusão da OS, à remove do mapa do PCP e altera a situação da OS "PCP finalizado" <br>
+            <strong>OSs fora do PCP:</strong> Inclui no mapa OSs que não foram incluídas.  <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Por dentro da OS é possível não enviá-la para o PCP ou selecionar o segmento da OS <br>
+            <strong>Reordenar cf OSs:</strong> xxx <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Mapa gantt</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/mapa-gantt.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            O mapa gantt fornece uma opção de visualização mais intuitivada da utilização das máquinas em relação aos trabalhos sendo feitos. Irá mostrar em verde as horas disponíveis e em vermelhos as horas que serão utilizadas, baseadas no mapa. Só aparecerão na lista, os equipamentos que estejam sendo usados.
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

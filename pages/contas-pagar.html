@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Contas a pagar</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/contas-pagar.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> Não é possível atribuir um código ao incluir um CP manual. <br>
+            <br>
+            PREFIXOS { <br>
+                CA/ CE/ CI/ CV (Comissionados) <br>
+                DF (CP vindo das Despesas fixas) <br>
+                EST (Entradas de estoque) <br>
+                FR (Frete - Incluído quando é definido um frete na NF (F5-Frete)) <br>
+                
+                NFFO (Notas fiscais de fornecedores) <br>
+                OC (vindo da Ordem de compra) <br>
+                ST (Serviços de terceiros - vindo das etapas) <br>
+                } <br>
+                </p>
+            <br>
+            <strong> <center>Menu inferior</center> </strong>
+            <p class="desc">
+            <strong>Estornar:</strong> O sistema irá desfazer a liquidação do título e a movimentação bancária. Para estornar datas passadas é necessário abrir o dia. <br>
+            <strong>Emitir boleto:</strong> Permite emitir boletos de vendas para os clientes da gráfica. <br>
+            <strong>Baixar/Autorizar:</strong> Ao baixar títulos do CP, eles gerarão movimentos bancários. O pagamento dos títulos também poderão ser autorizados e essa autorização poderá ser impressa. <br> 
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Incluir</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/contas-pagar-incluir.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Lançamento:</strong> É o título que originou o título do CP. <br>
+            <strong>Nro NF:</strong> Insira o número da NF do título.  <br>
+            <strong>Nro OC/OS:</strong> Insira o número da OS ou OC. <br>
+            <strong>Emissão:</strong> Data da emissão <br>
+            <strong>Venc.original:</strong> Vencimento do documento original <br>
+            <strong>Vencimento:</strong> Vencimento vigente <br>
+            <strong>Rel.ABC:</strong> Indica se o título irá ser apresentado no relatório ABC <br>
+            <strong>Fluxo caixa:</strong> Indica a data que o valor será debitado do fluxo de caixa <br>
+            <strong>Cód.fornecedor:</strong> Indica o fornecedor <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Não é possivel ter CP de clientes nem CR de fornecedores <br>
+            <strong>T.cobrança:</strong> Conta que sairá o dinheiro para o pagamento. Pode ser alterada (CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > TIPO COBRANÇA) <br>
+            <strong>Forma pgto:</strong> Como será feito o pagamento. Essa lista não poderá ser alterada <br>
+            <strong>Conta bancária:</strong> Conta definida para pagamento <br>
+            <strong>Valor original:</strong> Valor do documento <br>
+            <strong>Acréscimos | Descontos:</strong> Indicam acréscimo e descontos no título <br>
+            <strong>Adiantamento:</strong> Indica algum valor de adiantamento usado no título <br>
+            <strong>Moeda:</strong> Seleciona a moeda usada para a transação <br>
+            <strong>Vr.moeda:</strong> Valor unitário da moeda após a conversão <br>
+            <strong>Valor:</strong> Valor total após a conversão <br>
+            <strong>Obs.acrésc/descontos:</strong> Observações a respeito dos acréscimos ou descontos <br>
+            <strong>Despesa | Valor desp:</strong> Separa as compras feitas por plano de contas <br>
+            <strong>Multa | Tipo multa:</strong> Informa a multa que a gráfica terá que pagar <br>
+            <strong>Classificação:</strong> Faz a segmentação de despesas <br>
+            <strong>T.Doc.pgto:</strong> Tipo de documento para pagamento <br>
+            <strong>Código barras:</strong> Informa o número de código de barras <br>
+            <strong>Últ.CNAB:</strong> Informa a última CNAB. <br>
+            <strong>Dt.últ.CNAB:</strong> Informa a data da última CNAB. <br>
+            <strong>Observações:</strong> Informe qualquer informação que não tenha um campo específico. Essa observação só será apresentada dentro do título. <br>
+            <strong>Liquidado | Dt.liquidação:</strong> Indica se o título já foi pago <br>
+            <strong>Bx.parcial:</strong> Informa se foi feita uma baixa parcial <br>
+            <strong>Nro cheque:</strong> Quem usa cheque? <br>
+            <strong>Usuário baixa:</strong> Usuário que fez a baixa <br>
+            <strong>Contabilizável | Conferido:</strong> São marcados para fins de relatórios <br>
+            <strong>Autoriz.pg por:</strong> Indica quem fez a baixa/autorização <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <strong> <center>Baixar/ Autorizar</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/contas-a-pagar-baixar-autorizar.png" title="baixar-autorizar">
+    </div>
+    
+    <div>
+        <p class="desc-2"> A primeira linha da página é usada para filtrar os títulos que aparecerão na tabela para serem baixados.
+            <strong>Valor pago:</strong> Sempre que o valor pago for diferente do total do título, o valor a ser pago deverá ser informado aqui. <br>
+            <strong>Dif.devido:</strong> Deverá ser indicado o motivo da diferença de pagamento. <br>
+            <strong>Cheque/Doc:</strong> Indica um número do documento que será baixado <br>
+            <strong>Comp:</strong> Define se o título será compensado ou não. Lançamentos não compensados ficarão na segunda tabela das movimentações bancárias. <br>
+            <strong>Observações:</strong> Serão apresentadas dentro do próprio título. <br>
+            <strong>Imprimir autorizações:</strong> Permite imprimir os títulos que forem autorizados <br>
+            <strong>Cancelar:</strong> Cancela o título do CP <br>
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

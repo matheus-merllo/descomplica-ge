@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Impressoras, máquinas e cálculos</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/impressoras-maqs-calcs.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"><strong>impressoras, máqs, calcs:</strong> Serão cadastrados todas as impressoras e máquinas utilizadas no processo de produção da empresa, além dos cálculos programáveis. Os processos serão divididos em pré-impressao, impressão e acabamento. A aba de acabamentos recebe os cálculos programáveis também.</p>
+    </article>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img-2" src="../img/impressoras-maqs-calcs-alceadeira.JPG" title="alceadeira">
+    
+        <div>
+            <p class="desc-2"><strong>Alceadeira:</strong> O equipamento deve ser vinculado à um centro de custo ou deve ser selecionado o checkbox de terceiros.</p>
+            <p class="desc-2"><strong>Tempo min:</strong> Indica um tempo mínimo a ser usado nos orçamentos.</p>
+            <p class="desc-2"><strong>Fls acerto:</strong> Divide o formato das folhas pelo formato da impressão para saber quantas folhas serão acrescentadas.</p>
+            <p class="desc-2"><strong>Acres. papel:</strong> Indica uma porcentagem de acréscimo de papel.</p>
+            <p class="desc-2"><strong>Tipo alceadeira:</strong> Pode ser coladeira ou grampeadeira</p>
+            <p class="desc-2"><strong>Max. cad/ent:</strong> Indica o número máximo de cadernos por entrada. Se o trabalho tiver mais que o máximo de cadernos suportados pelo equipamento, a produtividade deve sempre ser considerada a menor possível.</p>
+            <p class="desc-2"><strong>Duplo paralelo:</strong> É uma repetição de impressões para páginas em sequências, uma espécie de TR para impressões com miolo. </p>
+        </div>
+    </div>
+    
+    <hr>
+
+    <strong> <center>Dobradeira</center> </strong>
+    <div class="main-2">
+        <img class="img-2" src="../img/impressoras-maqs-calcs-Dobradeira.JPG" title="dobradeira">
+    
+        <div>
+            <p class="desc-2"><strong>Dobradeira:</strong> O equipamento deve ser vinculado à um centro de custo ou deve ser selecionado o checkbox de terceiros.</p>
+            <p class="desc-2"><strong>Pedir parâms:</strong> Indica se será pedido algum parâmetro ao calcular o orçamento</p>
+            <p class="desc-2"><input type="checkbox"> <strong>Cria cadernos para intercalação(dobra em cruz automática para livros e revistas):</strong> Deve ser marcada para o cálcuo ser feito automaticamente.</p>
+            <p class="desc-2"><strong>Checar medida:</strong> ???</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <strong> <center>Guilhotina</center> </strong>
+    <div class="main-2">
+        <img class="img-2" src="../img/impressoras-maqs-calcs-guilhotina.JPG" title="guilhotina">
+    
+        <div>
+            <p class="desc-2"><strong>Guilhotina:</strong> O equipamento deve ser vinculado à um centro de custo ou deve ser selecionado o checkbox de terceiros.</p>
+            <p class="desc-2"><strong>Tipo de corte:</strong> Geral = será usado na pré-impressão e nos cortes finais. <br>Caso seja cadastrada uma guilhotina só para pré-impressão, deverá ser cadastrada outra para o acabamento, e vice-versa (caso o trabalho necessite de duas etapas de corte).</p>
+        </div>
+    </div>
+    
+    <hr>
+
+    <strong> <center>Copiadora</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/impressoras-maqs-calcs-copiadora.JPG" title="copiadora">
+    </div>
+    
+        <div>
+            <p class="desc-2"><strong>Copiadora:</strong> O equipamento deve ser vinculado à um centro de custo ou deve ser selecionado o checkbox de terceiros.</p>
+            <p class="desc-2"><strong>Fornecedor padrão:</strong> Caso o processo seja terceirizado, deverá ser indicado o fornecedor responsável pelo serviço.</p>
+            <p class="desc-2"><strong>Reversão:</strong> Indica se o equipamento possui reversão, ou seja, se ele vira a página automaticamente.</p>
+            <p class="desc-2"><strong>Pinça:</strong> Indica a área que a pinça irá manusear o substrato.</p>
+            <p class="desc-2"><strong>Chapado:</strong> Indica a porcentagem da área de mancha que receberá tinta. Normalmente, quando o trabalho tem mais de 70% da área com tinta, ele é considerado chapado.</p>
+            <p class="desc-2"><strong>Min.cor / Max.cor:</strong> Define o mínimo e o máximo de cores que poderão ser usado no equipamento.</p>
+            <p class="desc-2"><span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Caso as cores do trabalho não estejam dentro do escopo estipulado, a máquina não poderá nem mesmo ser forçada.</p>
+            <p class="desc-2"><strong>Min.auto / Max.auto:</strong> Define o mínimo e o máximo de cores que serão sugeridos pelo sistema ao fazer o orçamento.</p>
+            <p class="desc-2"><strong>Preço/cópia:</strong> É um valor fixo por impressão da copiadora. Caso o trabalho tenha um aldo colorido e outro preto e branco, será feito uma média dos valor cobrados.</p>
+            <p class="desc-2"><span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Caso seja usado um cálculo programável de click, ele substituirá os valores do preço por cópia.</p>
+            <p class="desc-2"><strong>fx. prod:</strong> Indica uma "janela" entre as trocas de faixa de produtividade e/ou faixas de quebra</p>
+            <p class="desc-2"><strong>Prod Verniz:</strong> ???</p>
+            <p class="desc-2"><strong>Preço/ cópia por cor:</strong> ???</p>
+            <p class="desc-2"><strong>Calc. cópias p/quebra:</strong> ???</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <strong> <center>Offset plana</center> </strong>
+    <div class="main-2">
+        <img class="img-2" src="../img/impressoras-maqs-calcs-offset.JPG" title="offset plana">
+
+        <div>
+            <p class="desc-2"><strong>Offset plana:</strong> O equipamento deve ser vinculado à um centro de custo ou deve ser selecionado o checkbox de terceiros.</p>
+            <p class="desc-2"><strong>Alt. máxima:</strong> Indica a altura máxima da pilha de papel que será usada</p>
+            <p class="desc-2"><strong>N° UI:</strong> Indica o número de castelas de impressão</p>
+            <p class="desc-2"><strong>UI verniz:</strong> Indica se a impressora tem unidade de impressão exclusiva para verniz</p>
+            <p class="desc-2"><strong>Numeradores:</strong> Indica a quantidade de módulos numeradores do equipamento</p>
+            <p class="desc-2"><strong>Chapa simples:</strong> chapa feita manualmente / Fotolito</p>
+        </div>
+        
+    </div>
+    
+    <hr>
+
+    <strong> <center>Flexografia</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/impressoras-maqs-calcs-offset.JPG" title="offset plana">
+    </div>
+
+        <div>
+            <p class="desc">
+                Normalmente máquinas flexográficas não definem gramatura mínima e máxima e não costumam ter reversão. <br>
+                <br>
+                <strong>Calc.tinta:</strong> Não irá calcular a tinta nessa máquina, independente se ela estiver cadastrada nas configurações gerais. <br>
+                <strong>Cálculo progr.faca:</strong> Permite vincular um código programável para cobrar a faca, mas não é usual. <br>
+                <strong>TIragem máxima:</strong> Define uma tiragem máxima para a faca <br>
+                <strong>Cobrar faca:</strong> Define se a faca será cobrada de forma total (cobrando o valor total da faca) ou proporcional (área do serviço / tiragem máxima) <br>
+                <strong>Preço mínimo:</strong> Define um preço mínimo que será cobrado pela faca <br>
+                <strong>Cálculo clichê:</strong> Cobra o clichê através do cálculo programável "Cyrel", que leva em conta a area em cm2 * numero de cores do serviço * número de modelos. <br>
+                <strong>Reimprime:</strong> Normalmente não, pois flexografia não costuma ter mais de uma entrada. <br>
+                <strong>Chapado:</strong> A partir da porcentagem definida, o trabalho será considerado chapado. <br>
+                <strong>Red.prod.chapado:</strong> Defina uma porcentagem de redução na produção de trabalhos chapados. <br>
+                <strong>xxx:</strong> xxx <br>
+        </div>
+        
+    </div>
+    
+    <hr>
+
+    <strong> <center>Cálculos programáveis</center> </strong>
+    <div class="main-2">
+        <img class="img-2" src="../img/impressoras-maqs-calcs-programaveis.JPG" title="cáculos programáveis">
+
+        <div>
+            <p class="desc-2">MAT1 não aparecerá na carta proposta, somente o RESULT <br>
+                Metro linear é para cobrar processo <br>
+                Metro quadrado é para cobrar material <br>
+            </p> 
+            <br>
+            <p class="desc-2"><strong>Cáculos programáveis:</strong> O cálculo deve ser vinculado à um centro de custo ou deve ser selecionado o checkbox de terceiros.</p>
+            <p class="desc-2"><strong>Preço acerto:</strong> Quando um cálculo é de um processo terceirizado, a empresa pode cobrar um tempo de acerto inicial.</p>
+            <p class="desc-2"><strong>Pedir parâms:</strong> Deve sempre ser marcado caso o cálculo precise de parâmetros indicados pelo usuário.</p>
+            <p class="desc-2"><strong>Calcular gravação de chapas:</strong> ???</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <strong> <center>Comunicação visual (digital)</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/impressoras-maqs-calcs-digital.JPG" title="Digital">
+    </div>
+
+        <div>
+            <p class="desc"> Nos cadastros de máquinas que trabalham por substrato flexível, o campo "Larg x Alt.máx" só deverá ser informado a largura. <br>
+                <br>
+                <strong>Acerto:</strong> Normalmente não tem acerto ou o acerto é pequeno <br>
+                <strong>Quebra Ini+fim:</strong> Define em milímetros, a quantidade da quebra <br>
+                <strong>Entre imagens:</strong> É o espaçamento da montagem no sentido da impressão (comprimento) <br>
+                <strong>Tinta padrão usada:</strong> Define a tinta que a máquina usará  <br>
+                <strong>Rendim. PO 100%:</strong> Define quantos metros quadrados a impressora faz por litro de tinta <br>
+                <strong>Imprime e/ou corta:</strong> Define se a máquina imprime e corta, só imprime, só corta, etc. <br>
+                <strong>Imprime em:</strong> Define se a máquina imprime em bobinas ou lâminas <br>
+                <strong>Imprime tinta T2(p/ calçar):</strong> Define a tinta usada no calço <br>
+                <strong>Impr.méd.carta em:</strong> Define o padrão de medida impressa <br>
+                <strong>Impr.méd.OS em:</strong> Define o padrão de medida impressa <br>
+                <strong>Impr.área:</strong> Imprime ou não a área total do serviço <br>
+                <strong>Produtividade:</strong> É definida pela ocupação do trabalho na largura da máquina. O sistema sempre definirá a faixa de produtividade pela largura do material usado. <br>
+                (Fórmula: se a produtividade estiver em mts, converta para cm multiplicando por 10. Divida o valor da produtividade pela faixa respectiva da máquina) <br>
+                <br>
+                <br>
+                </p>
+            <center><strong>Router</strong></center>
+            <p class="desc">
+                É usada para cortar materiais sólidos.
+                <strong>Larg x Alt:</strong> Deve ser informado a largura máxima da máquina e a altura da maior chapa disponível. <br>
+                <strong>Quebra:</strong> Não possui <br>
+                <strong>Entre imagens:</strong> Não possui <br>
+                <strong>Rendm. PO 100%:</strong> Não possui <br>
+                <strong>Imprimr e/ou corta:</strong> Só corta <br>
+                <strong>Imprime em:</strong> lâminas <br>
+                <strong>Produtividade:</strong> Define as produtividades nas faixas de corte. <br>
+            </p>
+            </p>
+        </div>
+        
+    </div>
+    
+    <hr>
+</body>
+</html>

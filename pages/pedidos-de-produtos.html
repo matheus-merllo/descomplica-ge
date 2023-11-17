@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Pedidos de produtos</span>
+    </header>
+
+    <div>
+        
+        <center><strong>Para gerar um produto acabado</strong></center> 
+        <br>
+        <p class="desc-2">
+            1- O material deve ser cadastrado no estoque com o respectivo tipo (prod.cliente ou prod.gráfica). Se for um prod.cliente, o cliente deve ser vinculado ao produto. <br>
+            2- É preciso criar um orçamento do produto criado como orçamento modelo e vincular orçamento base. <br>
+            3- Gerar OS a partir do próprio menu de OSs, e dar baixa para gerar saldo do estoque. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Ao lançar um produto acabado para a NF e para o estoque, não será gerado o pedido, pois ao dar entrada o produto já será faturado. Não está certo nem errado, só muda de acordo com a forma que as empresas trabalham. <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <main class="main">
+        <img class="img" src="../img/pedidos-de-produtos.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> Os produtos acabados são qualquer produto do tipo "pród.cliente" ou "pród.gráfica" que são fabricados e armazenados no estoque da empresa. <br></p>
+            <br>
+            <br>
+            <strong> <center>Menu inferior</center> </strong>
+            <p class="desc">
+            <strong>Pronto p/ faturar:</strong> Relatório que mostra as quantidades dos itens que estão prontos para ser faturados. <br>
+            <strong>Estoque insuficiente:</strong> Mostra todos os pedidos em aberto com saldo em estoque insuficientes. <br>
+            <br>
+            <strong>Baixar pedido:</strong> Quando o pedido estiver pronto para ser faturado. <br>
+            <strong>Estornar pedido:</strong> Ao estornar pedidos que tenham ido para o pré faturamento, os empenhos serão refeitos, a situação do pedido ficará em aberto, porém o estoque só será estornado, caso a NF seja excluída. Caso o pedido só tenha sido baixado pelo estoque, o estorno atualizará o estoque automaticamente. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> É importante sempre recalcular o saldos do estoque. <br>
+            <strong>Enviar para</strong> { <br>
+                faturamento (baixa o pedido e envia para o pré faturamento) <br>
+                Contas a receber (envia o pedido diretamente para o contas a receber, sem NF) <br>
+                Cancelar pedido (O pedido só pode ser cancelado através desse menu, ele será cancelado e o empenho será deletado) <br>
+                Só baixar baixando estoque (Dá baixa no pedido sem lançar no financeiro (equivalente a OS em cortesia)) <br>
+                Só baixar sem baixar estoque (Só baixa o pedido sem dar baixa no estoque nem no financeiro. Só será usado para corrigir erros) <br>
+            } <br>
+            <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Incluir</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/pedidos-de-produtos-incluir.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Ao gerar um pedido a quantidade é empenhada automaticamente.
+            <strong>Nro pedido cliente:</strong> É o número do pedido do sistema do próprio sistema do cliente. <br>
+            <strong>Classificação:</strong> É uma segmentação para os pedidos. <br>
+            <strong>Cód.cliente:</strong> Cliente que está comprando o produto. <br>
+            <strong>Contato:</strong> Nome do cliente. <br>
+            <strong>Fone:</strong> Telefone do contato <br>
+            <strong>Prazo pgto:</strong> Será enviado para o prée-faturamento. <br>
+            <strong>Vr.antecipado::</strong> ??? <br>
+            <strong>%Desconto::</strong> ??? <br>
+            <strong>Entrega prevista:</strong> Previsão de entrega do material. <br>
+            <strong>Entr.parcial:</strong> Indica a possibilidade do cliente receber o pedido de forma parcial. <br>
+            <strong>Entrega efetiva:</strong> Será preenchido quando a baixa for feita. <br>
+            <strong>Atraso:</strong> A partir da data prevista de entrega, o atraso é contado. <br>
+            <strong>Vendedor | %CV:</strong> Vincula vendedor e estabelece comissão padrão. <br>
+            <strong>Transportadora:</strong> Define a transportadora que fará a entrega. <br>
+            <strong>Tipo frete:</strong> Incluso (Já está no preço do produto) ou a pagar (será gerado um valor separadamente para o frete). <br>
+            <strong>Peso total:</strong> ??? <br>
+            <strong>Peso aberto:</strong> ??? <br>
+            <strong>Total aberto:</strong> ??? <br>
+            <strong>situação estoque:</strong> É um relatório que informa as quantidades dos itens do pedido. <br>
+            <strong>Aplicar desconto:</strong> Aplica um percentual de desconto sobre o preço unitário. <br>
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Tipos de orçamentos</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/tipos-orcamentos.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Cada orçamento terá suas opções específicas e deverão ser bem parametrizados para os orçamentos serem calculados com precisão. <br>
+            <br>
+            O "tipo de serviço" é "Digital" e a "Quantidade em" sempre será em "Un". <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <div class="main">
+        <img class="img" src="../img/tipos-orcamentos-incluir.JPG" title="incluir">
+    </div>
+    
+        <div>
+            <p class="desc-2"> <strong>Tipo de serviço:</strong> Cada tipo de serviço tem sua peculiaridade, abilitando e/ou desabilitando campos específicos. Define as padronizações e as possíveis máquinas usadas nos orçamentos.  </p>
+            <p class="desc-2"><strong>Tipo de NF:</strong> .</p>
+            <p class="desc-2"><strong>Qtdade em:</strong> Altera o tempo de medida na tiragem (quantidade) do orçamento.</p>
+            <p class="desc-2"><strong>Cód. na NF:</strong> Código do produto na NF. serve para padronizar para que sempre que for emitida uma NFe daquele serviço/produto o campo “Cód. na NFe” no botão “Outros Detalhes” na Nota Fiscal já saia preenchido, e assim, seja informado no XML.</p>
+            <p class="desc-2"><strong>Classificação:</strong> Não tem peso fiscal, somente auxilia no gerenciamento. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Se aplica somente a Nfe do tipo Estadual, e a produtos que não estejam vinculados ao estoque, pois se estiverem vinculados ao estoque, carregará do campo “Cód. Cli/Nfe” do cadastro do  material do estoque (produto acabado).</p>
+            <p class="desc-2"><strong>NCM:</strong> Nomenclatura Comum do Mercosul. É um código que TODOS os produtos têm e é utilizado para categorizar a mercadoria, criado pela Organização Mundial do Comércio (OMC) e obrigatório em notas estaduais.</p>
+            <p class="desc-2"><strong>Markup:</strong> Irá sobrepor o Markup padrão para esse tipo de orçamento, caso esse campo seja marcado.</p>
+            <p class="desc-2"><strong>CM mínima:</strong> ???. <br>
+                <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Não defina uma comissão marginal mínima e um valor mínimo no mesmo tipo de orçamento.</p>
+            <p class="desc-2"><strong>Valor mínimo:</strong> Altera o preço de venda no orçamento.</p>
+            <p class="desc-2"><strong>Tipo valor mínimo:</strong> .</p>
+            <p class="desc-2"><strong>CM:</strong> Horas vendidas + taxa de ganhos.</p>
+            <p class="desc-2"><strong>Tempo prod.:</strong> Define um tempo de produção que será levado em conta na produção do serviço.</p>
+            <p class="desc-2"><strong>Depto PCP:</strong> Define a segmentação do tipo de orçamento no PCP. Se for marcado com "não" as OSs desse tipo de orçamento não irão para o PCP.</p>
+            <p class="desc-2"><strong>Tipo unitário:</strong> Para mudar o tipo unitário do Preço de Venda direto na tela do orç.: <br>
+                Digitar nos parâmetros: <br>
+                ARM= Milheiro <br>
+                ARU= Unidade <br>
+                AR2= Metro 2.</p>
+            <p class="desc-2"><strong>T. cálculo:</strong> Irá calcular o preço de venda automaticamente, levabdo em conta os parâmetros do orçamento. Se estiver em manual, irá desconsiderar todos os parâmetros e atribuir o valor preenchido no campo "Vl.manual" <br>
+                O tipo de cálculo tabelado só pode ser usado para tipos de orçamento em que o preço tabela varie apenas por tamanho, material e quantidade de cores. Caso tenha mais alguma variação além dessas 3, como por exemplo acabamentos, não será possível usar esse recurso, será utilizado o tipo “Auto” ou “Manual”. <br>
+                Ex.: Cartão de visita, cópias A3 e A4 > Tabela/un <br>
+                Banner e Lona > Tabela/mt2 <br>
+                    <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> A tabela só varia em formato, material e cor . Só deve ser usado em trabalhos que alterem essas especificações.
+            </p>
+            <p class="desc-2"><strong>Cameron:</strong> Espaçamento nas laterais do trabalho.</p>
+            <p class="desc-2"><strong>Tempo prod:</strong> Incide sobre o valor do "TP" no orçamento.</p>
+            <p class="desc-2"><strong>Sangrar automático:</strong> Irá usar a área de mancha para fazer os cálculos, alterando o aproveitamento do papel no orçamento.</p>
+            <p class="desc-2"><strong>Snagria automática:</strong> Será o valor padrão da sangria quando o campo anterior for ativado.</p>
+            <p class="desc-2"><strong>Abertura autom. sangr:</strong> É o espaço entre as imagens que rece a sangria.</p>
+            <p class="desc-2"><strong>Refile:</strong> Quanto do papel será perdido para deixa-lo no formato final. É feito após a impressão.</p>
+            <p class="desc-2"><strong>Impr. págs. como:</strong> Altera a apresentação da quantidade de páginas de um miolo na carta proposta.</p>     
+            <p class="desc-2"><strong>Impr. méd. carta em | Impr. med. O.S. em:</strong> Irá alterar as medidas apresentadas na carta proposta e na O.S.
+                <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Gráficas de flexografia normalmente usam as medidas para cálculos em "mm". <br>
+                "CADASTROS > CONFIG. GERAIS > CÁLCULOS > UNIDADE DE MEDIDA"</p>
+            <p class="desc-2"><strong>Obs. padrões na O.S.:</strong> É usada para paadronizar alguma observação para todas os orçamentos desse tipo.</p> 
+            <p class="desc-2"><strong>Modelo ficha téc. O.S.:</strong> É um modelo com perguntas obrigatórias ou não feita no momento de gerar a O.S. <br>
+                <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> As perguntas são cadastradas no menu "PRODUÇÃO > OUTROS CADASTROS DE PRODUÇÃO > ESPECIFICAÇÕES TÉCNICAS". A ficha é montada com essas perguntas no caminho "PRODUÇÃO > OUTROS CADASTROS DE PROPOSTA > ESPECIFICAÇÕES".</p>
+            <p class="desc-2"><strong>Não usar modular:</strong> Bloqueia que impressoras modulares sejam usadas nesse tipo de orçamento.</p> 
+            <p class="desc-2"><strong>Não usar batida:</strong> Bloqueia que impressoras de batida sejam usadas nesse tipo de orçamento.</p> 
+        </div>
+    
+
+</body>
+</html>

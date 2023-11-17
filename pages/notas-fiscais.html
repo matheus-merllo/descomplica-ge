@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Notas fiscais</span>
+    </header>
+
+    <center><strong>NFs de devolução com IPI</strong></center><br>
+    <div>
+        <p class="desc-2">
+            Notas de devolução com IPI não terão o valor do imposto apresentados na NF pois o valor recebe uma nova TAG (IPIDevol).A configuração recomendada é (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > vIPIDevol = NÃO). Dessa forma, o valor irá para o campo correto, mas não será apresentado na DANFE. Se a opção for "SIM" o valor será apresentado na DANFE, mas o valor não estará no campo correto.
+        </p>
+    </div>
+
+    <hr>
+    
+    <center><strong>NF - simples nacional</strong></center><br>
+    <div>
+        <p class="desc-2">
+            Não destacam na NF impostos federais a não ser PIS e COFINS, eles também serão pagos, só não serão destacados. <br>
+            Sempre será usado o CSOSN no lugar do CST. <br>
+            Será criado um campo "%Cr.ICM SN" no cadastro da NF. <br>
+                (CADASTROS > CONFIGURAÇÕES GERAIS > NFE > "%Cr.ICM SN" E "MENSAGEM CRÉDITO ICMS SIMPLES")  <br>
+            Para devoluções de empresas do simples deve ser informado o csosn 900-Outros (Definido pela contabilidade) <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>Notas municipais</strong></center><br>
+    <div>
+        <p class="desc-2">
+            As notas municipais são numeradas pela prefeitura. Não há notas de serviço com situação denegadas. <br>
+            NFSe não tem CFOP, mas ainda deve ser definido no sistema, pois ele tem outras finalidades, como: enviar dados para o CR, fazer movimentações no estoque e definir observações. Pode ser definido através do menu (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > CFOP padrão NFSe) <br>
+            As series são definidas por letras. <br>
+            RPS = Recibo provisório de serviço. <br>
+            Desconto: Não funciona para notas de serviço. O desconto deve ser calculado manualmente e aplicado no item. <br>
+            NCM e CST: Não são usuais em NFSe. <br>
+            Frete: Normalmente não há frete, pois serviços não são transportados. <br>
+            As notas NFSe referênciadas devem ser inseridas na aba F8. <br>
+            Não há carta de correção para NFSe. <br>
+            NFSe só serão canceladas pelo site da prefeitura. <br>
+            Para ISS retido em NFSe, a mensagem pode ser alterada em (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > "MENSAGEM RETENÇÃO ISS") <br>
+            Natureza de operação parão: (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > "Nat.Oper.Padrão NFSe"). <br>
+            O layout das notas não pode ser alterado. <br>
+        </p>
+    </div>
+
+    <hr>
+    
+    <main class="main">
+        <img class="img" src="../img/notas-fiscais.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> NF e financeiro são módulos distintos. Só é indicado que se exclua NFs com a certeza que ainda não foram enviadas. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> A visualização da NF sempre será feita a partir do XML.</p>
+    </article>
+    
+    <center><strong>F11-Outras opções</strong></center><br>
+    <article>
+        <p class="desc">
+            <strong>Enviar XMLs contabilidade:</strong>É usado para enviar as XMLs para a contabilidade, normalmente 1 vez por mês. Só enviará notas estaduais.
+            <strong>Inutilizar numeração NFe:</strong>É usada para inutilizar o número da nota junto a SEFAZ.  <br>
+            <strong>Arquivo de itens da NF:</strong>É muito usada em relatórios que evolvam os itens das NFs. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Os relatórios gerados diretamente pelo menu de NF só poderá usar campos do cabeçalho e das abas. <br>
+            <strong>Inconsistência NF x CR:</strong>Irá mostrar se existem inconsistências entre as NFs e o CR. Qualquer Nota que tenha sido cobrada do cliente e não tenha sido gerado um contas a receber, aparecerá nesse menu. A NF precisa estar processada para aparecer nesse relatório. <br> 
+            <strong>Gerar SINTEGRA:</strong>É um arquivo usado para gerar um arquivo em .TXT e leva as informações das notas emitidas. É o precursor do SPED.  <br> 
+            <strong>Renumerar/Mover PC:</strong>Irá unir 2 planos de contas e excluir um deles. <br>
+        </p>
+    </article>
+    
+    <center><strong>Menu inferior</strong></center><br>
+    <article>
+        <p class="desc">
+            <strong>Imprimir/enviar:</strong>Usado para imprimir e/ou enviar NF para o email cadastrado no cliente e todos os contatos. <br>
+            <strong>Carta de correção:</strong>Só é possível fazer uma carta de correção para uma NF com a situação "normal". A carta deverá ter no mínimo 15 caracteres e o sistema só registra uma carta de correção. As informações serão enviadas para a aba F7 da NF. A carta poderá ser anexada aos dados adicionais da nota, caso o campo ainda tenha espaço, mas sempre será impressa como segunda página da DANFE.Será gerado um arquivo de correção na pasta "cli" com a chave de acesso da NF seguido de "-CCe" <br>
+            <strong>Cancelar NF:</strong>Limite de 24 horas para fazer o cancelamento. Será gerado um arquivo de cancelamento na pasta "cli" com a chave de acesso da NF seguido de "-canc". <br>
+            <strong>Últimas NFs:</strong>Mostra as últimas NFs geradas pelo sistema para cada empresa cadastrada. <br>
+            <strong>Duplicata:</strong>É um documento para o cliente reconhecer a dívida. Está em desuso, pois o boleto já faz esse papel. Só é possível gerar uma duplicata para NFs cadastradas no sistema. <br>
+        </p>
+    </article>
+
+    <hr>
+    
+    <center><strong>NF > Enviar NFe</strong></center><br>
+    <main class="main">
+        <img class="img" src="../img/xx.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc">
+            <strong>Gerar XML e validar antes:</strong>Irá gerar o XML e validar se os campos obrigatórios estão preenchidos da forma correta. <br>
+            <strong>Verificar status serviço:</strong>Verifica se a SEFAZ está disponível <br>
+            <strong>Enviar NFe/ Consultar:</strong>Ao enviar a nota, a aba F7-NFe será atualizada com as informações da Nf enviada. <br>
+        </p>
+    </article>
+
+    <hr>
+    
+    <center><strong>NF remessa</strong></center><br>
+    <main class="main">
+        <img class="img" src="../img/xx.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc">
+            É usada para agilizar as baixas de programações para entrega. Possibilita baixar todas as entregas de uma NF de uma vez. Também é usada para gerar remessa de notas municipais (NFSe) para transporte, pois as transportadoras não transportam mercadorias com notas municipais. <br>
+            <strong>xx:</strong>xx <br>
+            <strong>xx:</strong>xx <br>
+            <strong>xx:</strong>xx <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <center><strong>Pré-faturamento</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/pre-faturamento.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Notas emitidas, mesmo que forem de devolução, ficarão na pasta de cliente (cli). Só é possível emitir NFs para clientes. (nfe > "código do cliente" > "ano" > cli).
+            <br>
+            CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > "NÃO PERMITE CARREGAR PRÉ-FATURAMENTO DE EMPRESA DIFERENTE DA OS/PEDIDO" = Vai definir se será possível carregar pré-faturamento de empresas diferentes das OSs e pedidos. <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Para faturar mais de uma NF simultaneamente, as notas deverão ter o mesmo comissionado. <br>
+            <br>
+            O pré faturamento poderá vir de uma baixa de OS ou pedido. 
+            <strong>Cliente, OS ou pedido:</strong> : Campo de busca do pré-faturamento. <br> 
+            <strong>Somente (zênite):</strong> Indica se serão mostrados os pré-faturamentos só de uma empresa ou de todas cadastradas. <br>
+            <strong>Tipo Pré-Fat.:</strong> Seleciona se serão mostrados somente OSs, só pedidos ou todos os pré-faturamentos. <br>
+            <strong>Mostrara OSs/Pedidos não baixados:</strong> Mostrará todas as programações de OS que ainda não foram baixadas. <br>
+            <strong>Dt.pevista de | Dt.prevista até:</strong> Filtra os pré-faturamentos por período. <br>
+            <strong>Descrição/ Observações:</strong> São importados do campo "Observações para depto. financeiro" na baixa da OS. <br>
+            <strong>Estoque:</strong> Estará Ok quando a quantidade em estoque for o suficiente. Só irá verificar o estoque para produtos acabados. Não é possível gerar uma NF com estoque negativo. <br>
+            <br>
+            <strong>Expedição de serviços e produtos (Tabela):</strong> Trará as informações de expedição como volumes e peso dos campos da baixa da OS. <br>
+            <br>
+            <strong>OK - Carregar pré-faturamento:</strong> Enviará a nota para o faturamento de fato. <br>
+            <strong>Lançar pré-faturamento direto no CR:</strong> Lançará o pré-faturamento direto no contas a pagar sem NF. <br>
+            <strong>Cancelar:</strong> Mudará a situação da OS para baixa manual e dos produtos acabados para cancelado. <br>
+            <br>
+            <strong>Observações cadastro cliente:</strong> São trazidos do cadastro do cliente e não serão enviadas para a NF. <br>
+        </p>
+    </div>
+
+    <hr>
+    <hr>
+
+    <center><strong>Notas Fiscais (incluir)</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/xx.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <center><strong>Menu inferior</strong></center><br>
+        <p class="desc-2">
+            Pré-faturamento: Permite voltar ao pré-faturamento para adicionar novas OSs do mesmo cliente. <br>
+            Carregar anterior: Permite carregar a nota anterior, seja estadual ou municipal. <br>
+            <br>
+            Após gravada: >> <br>
+            Cálc.Manual: Habilita todos os campos e não fará os cálculos de forma automática. <br>
+            Relançar CR: Refazer o lançamento no contas a receber (Sobrescreve os dados). <br>
+            Já enviada?:  Certifica se a NF foi ou não autorizada. <br>
+            Ver: Visualização da DANFE <br>
+            <br>
+        </p>
+    </div>
+
+    <div>
+        <p class="desc-2">
+            <strong>NFe Estadual N° Lanç:</strong>Define a ordem dos registros no sistema. <br> 
+            <strong>N° NFe:</strong>É Possivel definir o número da NF. <br> 
+            <strong>Empresa:</strong>Identifica qual empresa está emitindo a NF. <br> 
+            <strong>Serie:</strong>É um número sequencial que define a numeração da NF. <br>
+            Pode ser alterado através do campo = CADASTROS > CONFIGURAÇÕES GERAIS > NF > Serie "NFe".  <br>
+            <br>
+            <strong>Emissão:</strong>Data que a NF foi emitida. <br> 
+            <strong>Saída:</strong>É definida sempre com a mesma data da emissão com 5 minutos à frente. <br> 
+            <strong>Situação:</strong>Defini a situação da NF <br> 
+            - A enviar (situação padrão da MF ao ser gerada) <br>
+            - Enviada (Ao fazer a tentativa de envio da NF) <br>
+            - Normal (Envio confirmado da NF) <br>
+            -  Cancelada (Só é possível cancelar NF com a situação "normal") <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Após o cancelamento de uma NF não é possível desfazer o cancelamento. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Prazo legal de cancelamento = 24 horas após a autorização. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Indicio de circulação da mercadoria impossibilita o cancelamento da NF <br>
+            <br>
+            - Rejeitada (NF rejeitada ao ser enviada) <br>
+            - Denegada (A SEFAZ não aceitou a NF e não autorizou a correção, isso acontece por problemas com a própria empresa que irá invalidar a inscrição estadual) <br>
+            - Canc.extemp (cancelamento extemporâneo é o cancelamento após as 24 horas ou um cancelamento abrindo um processo junto a SEFAZ) <br>
+
+            <strong>CFOP principal:</strong>Importa o CFOP padrão para a NF. <br> 
+            <strong>Finalidade:</strong><br>
+            - Normal (NF de venda, Nota de simples remessa) <br>
+            - Complementar (Nf de venda com complemento de impostos) <br> 
+            - Ajuste (É uma NF de estorno) <br>
+            - Créd.ativo (tem a mesma situação que as notas normais, porém libera alguns campos bloqueados na NF. É uma finalidade exclusíva do sistema) <br>
+            - Devolução (Nota de devolução para fornecedores, para a própria empresa (caso seja pessoa física) ou por recusa de recebimento) <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Notas de devolução não cancelam os títulos de forma automática <br>
+            - Créd.ativo (Não é uma finalidade de NF, só existe no sistema para desbloquear alguns campos que são bloqueados no tipo normal) <br>
+            <br> 
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Nota complementar, ajuste ou devolução precisarão de uma NF relacionada. <br>
+            <strong>Ind. presença:</strong>Justifica como aconteceu a venda, se pela internet, ou presencialmente. <br> 
+            <strong>Consumidor:</strong>Indica se é uma NF para consumidor final ou não. <br> 
+            <strong>Cliente:</strong>Indica o cliente da NF. <br> 
+            <strong>N°pedido cli.:</strong>Número do pedido do cliente é o número da ordem de compra do cliente. <br> 
+            <strong>T.Cobrança:</strong>(CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > "TIPO COBRANÇA"). Também Pode ser padronizada no cadastro do cliente. <br> 
+            - Carteira (Dinheiro em espécie) <br>
+            - Banco simples (Usado em operações bancárias como depósitos, boletos, etc) <br>
+            - Banco descontada (A dívida é passada ao banco e é recebido um valor com algum desconto. O cliente passará a dever o banco) <br>
+            <br>
+            <strong>Conta baancária:</strong>Pode ser padronizada no cadastro do cliente ou padronizada no sistema (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > CÓD. CONTA PADRÃO). <br> 
+            <strong>Prazo pgto:</strong>Prazo de pagamento informado no orçamento ou na OS. <br> 
+            <strong>Adiant.aberto | Adiantamento:</strong>Defini um desconto no valor da NF baseado em adiantamentos que o cliente tenha. <br> 
+            <strong>Descontos:</strong>Desconto em R$ no valor total da NF. <br> 
+            <strong>Tipo desconto:</strong>Existem 2 tipos de desconto. <br>
+            - Condicionado (Sempre será considerado o valor total da NF (sem desconto) para a cobrança de impostos) <br>
+            - Incondicionadio (O imposto irá considerar o valor após o desconto) <br>
+            - Incond + Base ICMS (O imposto irá considerar o valor total da NF) <br>
+            <br> 
+            <strong>Vendedor | %CV | Agência | %CA:</strong>Vincula os comissionados e as comissões cobradas na nota. <br> 
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Ao gerar uma NF com mais de uma OS, os valores totais das comissões (R$) serão somados e divididos pelo valor total das OSs! <br>
+            <strong>Serviços:</strong>Valor total das OSs de serviço. <br> 
+            <strong>Produtos:</strong>Valor total das OSs de produto. <br> 
+            <strong>Total NF:</strong>Não necessariamente terá o mesmo valor dos itens da nota somados. <br> 
+            <strong>Desc./ Adiantam.x:</strong>Descontos serão descontados no valor total da NF | Adiantamentos serão descontados no valor total do contas a receber (CR). Só o desconto sairá na NF. <br> 
+            <strong>Total retenções:</strong>Quando há retenções de impostos. <br> 
+            <strong>Total no CR:</strong>Valor total lançado no contas a receber. <br> 
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>Itens da NF</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/XX.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O código do produto no estoque do cliente, poderá ser incluído no tipo de orçamento e no cadastro do estoque. <br>
+            <br>
+            CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > "NÃO PERMITE CARREGAR PRÉ-FATURAMENTO DE EMPRESA DIFERENTE DA OS/PEDIDO" = Vai definir se será possível carregar pré-faturamento de empresas diferentes das OSs e pedidos. <br>
+            <br>
+            <strong>Cód.est:</strong> Código do material no estoque (Só é usado para produto acabado). Se o usuário não tiver o modulo de produto acabado, essa coluna ficará desabilitada. <br> 
+            <strong>Qtdade:</strong> ??? <br> 
+            <strong>Un:</strong> ??? <br> 
+            <strong>Descrição:</strong> A descrição poderá ser alterada. <br> 
+            - (CONSIGURAÇÕES GERAIS > PRODUÇÃO > "DESCRIÇÃO COMPLETA NA NF") <br>
+	        - (ESTOQUE > CADASTRO DE ESTOQUE > DADOS > DESCRIÇÃO COMPLETA NA NF) <br>
+
+            <strong>Preço total:</strong> Preço unitário * Quantidade. Não terá mais de 2 casas decimais. <br> 
+            <strong>Pr.Unitário:</strong> Preço total / Quantidade. Não poderá ter mais de 6 casas decimais. <br> 
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Mais casas decimais irão gerar erros. Poderão ser corrigidos arredondando o preço total do item e dando um desconto para corrigir o valor.
+            <strong>NCM:</strong> Será importado do tipo de orçamento, do cadastro do estoque ou das configurações gerais (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > "NCM PADRÃO") <br> 
+            <strong>CST:</strong> <br> 
+            00 - Tributada integralmente: Totalmente em cima do valor de "BC.ICMS e Vr.ICMS"(nao utilizara nehumm campo) <br>
+            40 - Isenta: Não calcula ainda que haja %. É preciso informar o motivo (mot. desoneração- precisa informar o motivo ) <br>
+            41 - Não tributada: Não será tributada. (mot. desoneração- precisa informar o motivo .) A aliquota deve ser informada mais nao é descontada de qualquer forma. Só informativo. <br>
+            20 - Com redução de base de cálculo (Reduz a base de cálculo do ICMS). O valor será informado no campo "%Red.BC.ICM" <br>
+            10 - Tributada com ICMS por S.Tributária (Contrário do diferimento - antecipa o imposto) <br>
+            MVA: Estima o acrescimo de valor baseado no lucro previsto  <br>
+            pode ser padronizado no NCM <br>
+            <br>
+            70 - Com redução de BC e S.Tributária (Reduz a base de cálculo). O valor será informado no campo "%Red.BC.ST" <br>
+            51 - Diferimento (A responsabilidade de recolher o imposto será passada para um terceiro) O valor será informado no campo "%Diferimento" <br>
+            <br>
+
+            <strong>%ICM | %IPI:</strong> Trará as alíquotas do orçamento <br> 
+            <strong>N° Baixa:</strong> Informa o número da baixa de acordo com as programações <br> 
+            <strong>Nro OS:</strong> Número da OS <br> 
+            <strong>N°Ped.cliente:</strong> Pode ser alterado manualmente, pelo cadastro do item no estoque, pela OS ou pelo pedido. O número após a barra no código, indica a ordem do item no estoque. Só será impresso na DANFE caso ela seja impressa em formato paisagem. (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > "ORIENTAÇÃO"), porém essa informação será enviada para o XML de qualquer maneira. <br> 
+            <strong>CFOP:</strong> É possível ter 2 CFOP na mesma NF. <br> 
+            <strong>Origem:</strong> Define a origem dos itens  <br> 
+            <strong>CST ICM | CST IPI | CST PIS | CST COFINS:</strong> ??? <br> 
+            <strong>%Red.BC.ICM:</strong> Redução base de cálculos ICMS. <br> 
+            <strong>BC.ICMS:</strong> Base de cálculos ICMS. <br> 
+            <strong>Vr.ICMS:</strong> Valor ICMS. <br> 
+            <strong>%Cr.ICM SN:</strong> Crédito ICMS Simples nacional. <br> 
+            <strong>%MVA ST:</strong> Margem valor adicionado Substituição tributária. <br> 
+            <strong>%Red.BC ST:</strong> Redução base se cálculo Substituição tributária. <br> 
+            <strong>%ICM ST:</strong> ICMS Substituição tributária. <br> 
+            <strong>BC ICM ST:</strong> Base de cálculo ICMS Substituição tributária. <br> 
+            <strong>Vr.ICMS ST:</strong> Valor ICMS Substituição tributária. <br> 
+            <strong>%Diferimento:</strong> porcentagem do imposto pago por terceiros. <br> 
+            <strong>Vr.diferido:</strong> Valor diferido. <br> 
+            <strong>Vr.BC ST RA:</strong> Valor base de cálculo Substituição tributária retido anteriormente. <br> 
+            <strong>Vr.ICM ST RA:</strong> Valor ICMS Substituição tributária retido anteriormente. <br> 
+            <strong>Vr.ICM subst:</strong> Valor ICMS Substituído cobrado anteriormente. <br> 
+            <strong>Mot.desoneração:</strong> Justifica o motivo da desoneração. <br> 
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O código do produto no estoque do cliente poderá ser incluido no cadastro do estoque, no campo "Cód.cli/NFe".
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>F4-Impostos</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/XX.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Reter ISS | %ISS | BC ISS | Valor ISS:</strong> O percentual aplicado vale para todos os itens. <br> 
+            <strong>Desp.acessórios:</strong> Despesas | DA na base: Comum em notas de importação. É um valor atribuído a nota decorrente de qualquer razão que não seja a nota em si. <br>
+            <strong>Seguro:</strong> Adiciona um balor de seguro dos produtos. <br>
+            <strong>Reg.Tributário:</strong> Simples | L.Presumido | L.real (CADASTRO > CONFIGURAÇÕES GERAIS > REG. TRIBUTO ESTADO) <br>
+            <strong>Reter ICMS | BC ICMS | Valor ICMS | BC ICMS ST | Vr. ICMS ST:</strong> Referente ao ICMS <br>
+            <strong>ICMS desonerado:</strong> Valor de ICMS desonerado <br>
+            <strong>V.Aj.ICMS.C197:</strong> Ajuste SPED feito após a emissão da NF <br>
+            <strong>IPI no ICM:</strong> Inclui o valor do IPI ao BC ICMS.  <br>
+            (CADASTROS > CONFIGURAÇÕES GERAIS > NFe > IPI NO ICM) = Muda a base para o cálculo do imposto. <br>
+            <strong>IPI ICM ST:</strong> ??? <br>
+            <strong>BC IPI | Valor IPI:</strong> Referente ao IPI. <br>
+            <strong>Reter PIS | %PIS | BC PIS | Valor PIS:</strong> Referente ao PIS <br>
+            <strong>Reter COFINS | %COFINS | BC COFINS | Valor COFINS:</strong> Referente ao COFINS <br>
+            <strong>Reter CSLL | %CSLL | Vr CSLL retido:</strong> Referente ao CSLL <br>
+            <strong>Reter IR | %IRRF | BC IRRF | Vr IRRF:</strong> Referente ao IR <br>
+            <strong>BC Ret. Prev. | Ret. Prev | Vr Ret. Prev.:</strong> ??? <br>
+            <strong>%FCP | Valor FCP:</strong> Fundo de combate a pobreza <br>
+            <strong>ICMS UF dest | ICMS UF remet:</strong> ??? <br>
+            <strong>DIFAL:</strong> Diferença de alíquota de um estado para outro. <br>
+            <strong>%ICMS interno:</strong> ??? <br>
+            <strong>%ICMS interest:</strong> ??? <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>F5-Frete</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/XX.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Frete pelo:</strong> Defini o responsável pelo frete. <br> 
+            0 - Emitente (O emitente pago o frete) <br>
+            1 - Destinatário <br>
+            9 - Sem frete () <br>
+
+            <strong>Transportadora:</strong> Pode ser padronizada no cadastro do cliente, na OS ou no Pedido. <br>
+            <strong>Valor frete:</strong> ??? <br>
+            <strong>Placa:</strong> Placa do carro que transportará o produto. <br>
+            <strong>UF Placa:</strong> Estado da placa <br>
+            <strong>Qtd.volumes:</strong> Quantidade de volumes <br>
+            <strong>Frete orçado:</strong> Não está funcionando <br>
+            <strong>Espécie:</strong> Tipo de pacote que será transportado <br>
+            <strong>Peso líquido:</strong> Peso do produto <br>
+            <strong>Peso bruto:</strong> Peso total <br>
+            <strong>N° conhecimento | Dt.conhecimento:</strong> Número do conhecimento emitido pela transportadora (é a nota que a transportadora emite) <br>
+            <strong>Peso OSs:</strong> Peso calculado pelo sistema na OS <br>
+            <strong>Frete no CR:</strong> Só será usado em imprevistos. <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>F6-Observações</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/XX.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            Observações que sairão nas NFs
+            <strong>Obs. padrões #1| #2:</strong> Poderão ser padronizadas e importadas através do CFOP. <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>F7-NFe</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/XX.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            
+            <strong>Versão:</strong> Mostra a versão da NFe <br>
+            <strong>Modelo:</strong> Definido pelo sistema <br>
+            <strong>T.emissão:</strong> Altera o tipo de emissão da nota. Quando o tipo da nota for alterada na NF, também deverá ser alterada nas configurações gerais (CONFIGURAÇÕES GERAIS > NFE > T.EMISSÃO). <br>
+            <strong>NF de serviço / cód.serviço:</strong> Indica se a NF é de serviço.   <br>
+            <strong>N° prot. envio / Dt.prot.envio / Status envio:</strong> Referente ao envio da NF. <br>
+            <strong>N° prot carta correção / Dt. carta / Status carta correção:</strong> Referente a carta de correção. <br>
+            <strong>N° prot.cancelamento / Dt.cancelamento / Status cancelamento:</strong> Referente ao cancelamento. <br>
+            <strong>Just.cancelamento / Cancelada por:</strong> Todo cancelamento deverá ter uma justificativa nas tabelas auxiliares. <br>
+            <strong>Impr/XML/PDF:</strong> ??? <br>
+            <strong>Cód.numérico:</strong> É o código aleatório que o sistema gera e acrescenta à chave da NF. <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>F8-Outros</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/XX.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            
+            <strong>Conta receita:</strong> É alterado através do campo T.cobrança. <br>
+            <strong>Classificação:</strong> Importado da OS (segmentação de serviços). <br>
+            <strong>Especial | %CR | interna | %CI:</strong> comissionados <br>
+            <strong>Nat.operação:</strong> É possível alterar a natureza da operação através desse campo. <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>F9-NFs ref.</strong></center><br>
+    <div class="main">
+        <img class="img" src="../img/XX.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            Aqui ficarão todas as NFs que não tem a finalidade "normal". A chave de acesso sempre terá 44 dígitos.
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

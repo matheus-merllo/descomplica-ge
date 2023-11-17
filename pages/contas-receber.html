@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Contas a receber</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/contas-receber.jpg" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> 
+            ( Título = Registro no CR ) <br>
+            ( Liquidado = Pago ) <br>
+            <br>
+            Numeração {<br>
+            - Se o CR for gerado a partir de uma NF, o número do registro será o mesmo da NF. <br>
+            - OSBX = Corresponde ao número da baixa das OSs <br>
+            - CM = Contas a receber gerado manualmente <br>
+            - VB (Venda balcão) = Gerado a partir de uma venda balcão <br>
+            - CRU (Contas a receber unificada) = Quando as contas a receber de um cliente são unificadas. <br>
+            }
+        </p>
+    </article>
+
+    <strong><Center>F11-Outras opções</Center></strong>
+    <article>
+        <p class="desc-2">
+            <strong>Arquivo cheques pré:</strong> Exibi todos os cheques pré-datados cadastrados no sistema. <br>
+            <strong>Perdido por data:</strong>  O sistema dará como perdido todos os títulos atrasados com a data limíte expirada. <br>
+            <strong>Canc.comissões aberto:</strong> Cancelará todas as comissões em aberto até uma data limite. <br>
+            <strong>Sintetizar por ano:</strong> Transforma todos os títulos de um cliente em 1 só. <br>
+        </p>
+    </article>
+
+    <strong><Center>Menu inferior</Center></strong>
+    <article>
+        <p class="desc-2">
+            <strong>Abrir dia:</strong> Permite abrir um dia que já foi fechado para dar baixa e estornar valores de dias que já tenham sido fechados. <br>
+            <strong>Estornar:</strong> O sistema irá desfazer a liquidação do título e a movimentação bancária. <br>
+            <strong>Emitir recibo:</strong> Usado para imprimir recibos de pagamentos <br>
+            <strong>Carta(s) cobrança:</strong> Usado para filtrar clientes devedores e gerar cartas de cobrança em .PDF na pasta "documentos" <br>
+            <strong>Unir:</strong> Permite unir títulos do mesmo cliente, desde que eles tenham o mesmo comissionado. Títulos unidos terão o código "CRU" no início do novo título e os demais títulos usados na união serão excluídos. <br>
+            <strong>Imprimir boleto:</strong> Irá gerar o boleto do título selecionado. <br>
+            <strong>Cancelar:</strong> Irá cancelar o título do CR, desde que não esteja liquidado. <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong><Center>Incluir</Center></strong>
+    <div class="main">
+        <img class="img" src="../img/contas-receber-incluir.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Documento:</strong> Número do documento  <br>
+            <strong>Tipo doc:</strong> <br> 
+            - NF município: <br>
+            - NF estado:  <br>
+            - Baixa de OS (CR gerado a partir de uma baixa de OS) <br>
+            - Pedido (CR gerado a partir de um pedido) <br>
+            - CR manual (CR gerado manualmente) <br>
+            - Balcão ()
+            <br>
+            <strong>N° Lanç.Doc:</strong> É o número do lançamento (sequencia) do documento mencionado no campo "documento" <br>
+            <strong>Empresa:</strong> Empresa que receberá o pagamento <br>
+            <strong>Cód.cliente:</strong> Indica o código do cliente que fará o pagamento <br>
+            <strong>Dt.emissão:</strong> É a data de lançamento da NF. <br>
+            <strong>Venc.original:</strong> Vencimento original <br>
+            <strong>Vencimento:</strong> Irá prevalecer à data de vencimento original. <br>
+            <strong>Rel.ABC:</strong> Define se o título fará parte da análise da curva ABC (Sim = Em branco). <br>
+            <strong>Fluxo cx:</strong> Define como e se esse título será representado no fluxo de caixa. <br>
+            <strong>Valor original:</strong> Valor original da NF, antes do desconto, adiantamento e retenção de impostos <br>
+            <strong>Desconto NF:</strong> Desconto aplicado na NF <br>
+            <strong>Adiantamento:</strong> Adiantamento usado na NF <br>
+            <strong>Imposto retido:</strong> Imposto retido na NF <br>
+            <strong>Valor IPI:</strong> Valor acrescentado na NF <br>
+            <strong>Acréscimos | Descontos:</strong> Irão interferir diretamente no valor do CR <br>
+            <strong>Valor:</strong> Valor final do CR <br>
+            <strong>Atraso:</strong> Atraso médio desse título <br>
+            <strong>Juros calculado:</strong> Calcula só juros diário do atraso do título. (CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > "%multa" e "%Juros/mês") <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O sistema nunca irá somar o valor do atraso no campo de acréscimos <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> As taxas de juros e multas não irão variar de banco para banco, elas são padrão da gráfica <br>
+            <strong>T.Cobrança:</strong> Inclui um tipo de cobrança padrão (CONFIGURAÇÕES GERAIS > FINANCEIRO > "Tabela tipo cobrança"). Só tem efeito após reiniciar o sistema. <br>
+            - Banco descontada (Usado em factoring) - (FINANCEIRO > CONFIGURAÇÕES GERAIS > FINANCEIRO > "Tabela tipo financeiro") = Os checkbox indicam se os lançamentos do respectivo tipo serão lançados nas movimentações bancárias. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> No caso do factoring o usuário deverá lançar o valor total na movimentação bancaria com o tipo "banco descontada" e depois gerar uma saída como tipo "juros desconto de duplicidade" com a diferença do valor recebida
+            <strong>Conta bancária:</strong> Conta bancaria padrão que receberá o pagamento. (CONFIGURAÇÕES GERAIS > FINANCEIRO > Cód. Conta padrão) <br>
+            <strong>Receita pl.contas:</strong> Defini o plano de contas que receberá o valor. <br>
+            <strong>Forma pgto:</strong> Não irá alterar o tipo de cobrança. <br>
+            <strong>Obs.acr.descontos:</strong> Pode ser preenchida manualmente ou a partir da baixa do título do CR. <br>
+            <strong>Nr OS(s):</strong> Indica a OS do título <br>
+            <strong>Cont.marginal:</strong> Indica a contribuição marginal da OS <br>
+            <strong>Liquidado:</strong> Indica se o título está pago ou não, cancelado ou perdido (não recebeu e nunca receberá) <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Ao cancelar uma NF, o título no CR também será cancelado automaticamente <br>
+            <strong>Dt.liquidação | baixado por:</strong> Quando e quem liquidou o título <br>
+            <strong>Bx.parcial:</strong> Indica se houve um pagamento parcial e acrescenta uma letra no final da numeração (indicando a baixa parcial) <br>
+            <strong>Classificação:</strong> Segmentação do título <br>
+            <strong>Conferido:</strong> Indica se o título foi conferido <br>
+            <strong>Dt.liquid | Baixa | N°Lanc.CP:</strong> Serão lançados assim que o CR for baixado. <br>  
+            <strong>Observações:</strong> Serão visualizadas nesse menu, na tela da baixa do CR ou em relatórios. <br> 
+            <strong>Cheques pré-datados:</strong> Permite cadastrar cheques pré-datados recebidos. <br>
+        </p>
+    </div>
+
+    <hr>
+ 
+    <strong><Center>Baixar/Filtrar</Center></strong>
+    <div class="main">
+        <img class="img" src="../img/baixar-contas-pagar.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Títulos retroativos com mais de 30 dias, não serão lançados no sistema nem estornados. O layout pode ser alterado. <br>
+            A primeira linha da página é usada para filtrar os títulos que aparecerão na tabela para serem baixados. <br>
+            <strong>Abrir dia:</strong> Permite abrir um dia que já foi fechado para dar baixa e estornar valores de dias que já tenham sido fechados. <br>
+            <strong>Valor pago:</strong> Sempre que o valor pago for diferente do total do título, o valor a ser pago deverá ser informado aqui. <br>
+            <strong>Dif.devido:</strong> Deverá ser indicado o motivo da diferença de pagamento. <br>
+            <strong>Cheque/Doc:</strong> Indica um número do documento que será baixado <br>
+            <strong>Compen:</strong> Define se o título será compensado ou não. Lançamentos não compensados ficarão na segunda tabela das movimentações bancárias. <br>
+            <strong>Observações:</strong> Serão apresentadas dentro do próprio título. <br>
+            <strong>Imprimir autorizações:</strong> Permite imprimir os títulos que forem autorizados <br>
+            <strong>Cancelar:</strong> Cancela o título do CP <br>
+            <strong>Filtrar:</strong> Fará uma busca baseado nos filtros aplicados <br>
+            <strong>Perdido:</strong> Definirá os títulos marcados como perdido. Essa ação não pode ser desfeita. <br>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Movimentos bancários</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/movimentos-bancarios.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> Irá gerar um registro sempre que uma das rotinas sejam feitas: Contas a receber, contas a pagar, adiantamento de cliente, adiantamento de comissionados e fornecedores. <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Ao clicar em "incluir" e selecionar uma única conta em específico, isso nos levará para a tela de conciliação bancária. Tem esse nome pois deve ser conciliado o valor em conta com o valor no sistema.
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Para visualizar movimentações de dias retroativos é necessário abrir o dia.
+        </p>
+            <br>
+            <strong> <center>F11-Outras opções</center> </strong>
+            <p class="desc">
+            <strong>Arquivo não compensados:</strong> Levará para a tela com todos os títulos não compensados no sistema, sendo do CR ou CP. <br>
+            <strong>Renumerar lançamentos:</strong> Irá renumerar os lançamentos para "tampar lacunas de numeração". <br>
+            <strong>Sintetizar lançamentos:</strong> Irá sintetizar (agrupar) os lançamentos com mais de 5 anos. Isso irá gerar uma perda de históricos. <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Incluir</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/movimentos-bancarios-incluir.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Para alterar, mover ou excluir registros nas movimentações bancárias, usaremos a 1° coluna.  <br>
+            <br>
+            <strong>Conta bancária:</strong> Conta demonstrada na tabela. <br>
+            <strong>Data:</strong> Data demonstrada na tabela. <br>
+            <strong>Saldo CC:</strong> Saldo em conta na data definido. <br>
+            <strong>Saldo aplic:</strong> Mostra o saldo de aplicação na data selecionada. <br>
+            <strong>Saldo CC atual:</strong> Saldo na conta na data atual. <br>
+            <strong>Saldo aplic. atual:</strong> Saldo aplicado na data atual. <br>
+            <strong>Dados CC:</strong> Dados da conta. <br>
+            <br>
+            <strong>1° Tabela:</strong> { <br>
+                <strong>Lançam:</strong> Sequência dos lançamentos.  <br>
+                <strong>Conta:</strong> Indica o plano de contas. <br>
+                <strong>Descrição da conta:</strong> Nome da conta. <br>
+                <strong>Cheque/doc:</strong> É trazido do campo "Cheque/doc" na baixa do título. <br>
+                <strong>Valor:</strong> Valor da baixa. <br>
+                <strong>Ok:</strong> Usada pela conferência só para dar um Ok na baixa. <br>
+                <strong>Saldo total:</strong> Mostra o saldo total do dia. <br>
+                <strong>Descrição do lançamento:</strong> Pode ser acrescentada manualmente ou ser importada junto com a movimentação. <br>
+                - Adiantamento (Adiantamento de clientes) <br>
+                - Adiant. comissão (Adiantamento de comissão de vendedor) <br>
+                - Adiant. fornecedor (Adiantamento de comissão de fornecedor) <br>
+                - Rec.doc (Baixa no contas a receber) <br>
+                - Pgto.doc (Baixa no contas a pagar) <br>
+            } <br>
+            <br>
+            <strong>2° Tabela:</strong> {Serão mostrados todos os títulos que ainda não tenham sido compensados}
+            <br>
+            <br>
+            <strong>Transferir:</strong> Possibilita transferir valores de uma conta para outra. <br>
+            <strong>Aplicar:</strong> É usado para aplicar parte do dinheiro da conta. Sempre que o dinheiro render, deve-se gerar uma nova movimentação usando o tipo de conta de "rendimento". Sempre que perder dinheiro, o valor deve ser lançado manualmente (resgate) e deve ser usado um plano de contas de "perda de aplicação" <br>
+            <strong>Resgatar:</strong> Resgata um valor aplicado para a conta novamente, sempre que quiser usar o valor, ele deve ser resgatado. <br>
+            <strong>Saldo inicial:</strong> Ajusta o saldo inicial do dia da conta. O sistema irá criar uma movimentação respectiva no dia anterior. <br>
+            <strong>Recalcular:</strong> Permite recalcular os saldos. <br>
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

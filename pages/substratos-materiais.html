@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Substratos e materiais</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/substratos-materiais.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> O substrato poderá afetar a quebra, a produtividade, o tempo de acerto e a quantidade de tinta. <br>
+            <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <div class="main">
+        <img class="img" src="../img/substratos-materiais-incluir.JPG" title="incluir">
+    </div>
+    
+        <div>
+            <p class="desc">
+                <p class="desc"> <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Em flexografia, a gramatura do material irá alterar o peso do trabalho, mas não irá alterar o valor do orçamento. <br>
+                    <br>
+                <strong>Materiais maleáveis (digital):</strong> "Tipo de substrato" é "Bobina digital" e "Un.cálculo" será sempre "Metro linear"
+                Diferentemente da flexografia, os substratos da comunicação visual devem ter as larguras cadastradas. <br>
+                <strong>Materiais rígidos (Chapa):</strong> Tipo de substrato é unidade/ envelope e "Un.cálculo" sempre será por "Un", assim como a "Un.compra"
+                Por não ter gramatura, o padrão será 100 e o preço será definido <br>
+                <br>
+                Para materiais sem gramatura definida, o campo grams deverá ficar com “100” <br>
+                <br>
+                <strong>Cálculo constante da lombada:</strong> Informe o tamanho da lombada para ter uma base de cálculo para outros trabalhos com lombada nessa mesma gramatura. <br>
+                <strong>Red.produtividade:</strong> Define uma redução de produtividade <br>
+                <strong>Acr.acerto:</strong> Define um acréscimo no acerto do material <br>
+                <strong>Acr.quebra:</strong> Define um acréscimo na quebra do material <br>
+                <strong>Pr.fábrica:</strong> Informa um preço com desconto do material <br>
+                <strong>Múltiplo de:</strong> Irá calcular o preço com base em um múltiplo definido. <br>
+                <strong>gramatura obrigatória:</strong> Obriga a informar a gramatura no orçamento <br>
+                <strong>Checar medida na lista:</strong> Irá checar a lista de medidas para sugerir um material <br>
+                <strong>Imprimir medida:</strong> Define se a medida do substrato será impressa na carta proposta <br>
+                <strong>Medida obrigatória:</strong> Obriga a informar a medida no orçamento <br>
+                <strong>Imprime em tira/retira:</strong> Permite a impressão em tira/retira <br>
+                <strong>Imprimir gramatura:</strong> Define se a gramatura do substrato será impressa na carta proposta <br>
+                <strong>Checar gramatura na lista:</strong> Irá checar as gramaturas disponíveis o orçamento <br>
+                <strong>Material em cores:</strong> É marcado para uso em blocos. Após a OS de bloco gerada, essa opção dividirá a materia prima com base no número de vias e possibilitará que seja selecionado cada cor de forma individual. <br>
+                <strong>Calcula fração p/digital:</strong> Permite calcular fração de uma chapa usada. <br>
+                <strong>Usar pr.fábrica a partir:</strong> A partir do peso definido, o preço de fábrica será usado <br>
+                <strong>Usar medida a partir:</strong> A partir do peso definido, irá considerar a medida que for indicada na coluna da tabela "Usar meds". <br>
+                <strong>Usar meds:</strong> Automatico (cinsiderará a medida de forma automática) | Manual (a medida não será considerada e só será usada quando forçada manualmente no orçamento) | A partir peso (considerará medida a partir do peso definido no campo "usar medida a partir")<br>
+                <strong>Coef.absorção:</strong> Indica a absorção de tinta do substrato <br>
+                <strong>Const.cálc.lombada:</strong> Define a constante que será a base para os cálculos de lombada <br>
+                <strong>Limpeza:</strong> Será usada automaticamente no orçamento <br>
+                <strong>Permite soldar(digital):</strong> aterial permite solda ou não <br>
+                <strong>Aproveitar apara >:</strong> cima do valor definido, a chapa poderá ser aproveitada <br>
+                <strong>Subtipo:</strong> Define o subtipo do substrato, possibilitando que as cortadeiras digitais identifiquem se cortam ou não o tipo do matertial. <br>
+            </p>
+
+            <p class="desc-2"> <strong>Código:</strong> <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Não deve ser cadastrado um código com numeral no final, pois irá interferir com a gramatura do substrato no momento do orçamento</p>
+            <p class="desc-2"><strong>Validade preço:</strong> Indica um tempo que o preço informado é valido. Caso o tempo expire, o sistema enviará uma mensagem ao fazer um orçamento com o item.</p>
+        
+    </div>
+
+    <div class="main-2">
+        <img class="img-2" src="../img/substratos-materiais-chapas.JPG" title="chapas">
+    
+        <div>
+            <p class="desc-2"><strong>Tipo de chapa:</strong> indica se é CTP/terceiros ou se é feita manualmente (fotolito).</p>
+            <p class="desc-2"><strong>Tiragem máxima:</strong> Indica quantas cópias a matriz poderá fazer antes de precisar ser trocada.</p>
+            <p class="desc-2"><strong>Tempo de gravação:</strong> Altera o tempo do orçamento, caso não haja um cálculo programável vinculado ao processo.</p>
+        </div>
+    </div>
+    
+    <div class="main-2">
+        <img class="img-2" src="../img/substratos-materiais-tintas.JPG" title="tintas">
+    
+        <div>
+            <p class="desc"> <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> As tintas usadas no segmento digital são definidas por litro, de tipo "Digital". <br>
+            <p class="desc-2"><strong>Peso específico:</strong> É usado na fórmula SPANKS e altera o consumo de tinta.</p>
+            <p class="desc-2"><strong>Tinta p/ calço:</strong> ???</p>
+            <p class="desc-2"><strong>calc. mult. de:</strong> Arredonda o valor final do cálculo por um múltiplo especificado nesse campo.</p>
+        </div>
+    </div>
+
+    <div class="main-2">
+        <img class="img-2" src="../img/substratos-materiais-outros.JPG" title="outros">
+    
+        <div>
+            <p class="desc-2"><strong>Dobradeira:</strong> O equipamento deve ser vinculado à um centro de custo ou deve ser selecionado o checkbox de terceiros.</p>
+            <p class="desc-2"><strong>Imprimir qtd. calculada:</strong> ???</p>
+            <p class="desc-2"><strong>Empenhar:</strong> ???</p>
+        </div>
+    </div>
+
+</body>
+</html>

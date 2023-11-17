@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Boletos e remessas CNAB</span>
+    </header>
+
+    <div>
+        <strong> <center>CNAB (passo a passo)</center> </strong>
+        <p class="desc-2">  
+            1- Cadastrar o banco. <br>
+            2- Cadastrar a conta com todas as informações enviadas pelo cliente vinculando o banco a conta cadastrada. <br>
+            3- Salve o arquivo "ZDF.xml" na pasta do sistema de acordo com o o layout (240 ou 400) e atualizar os arquivos entrando no menu "? > Sobre o G.works Enterprise" ou "? > Manutenção de arquivos". <br>
+            4- Colocar a logo do banco na pasta "JPG" do sistema com o nome (bco"código do banco".JPG). EX: "bco247.jpg" <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <main class="main">
+        <img class="img" src="../img/boletos-remessa-cnab.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> CNAB = Centro Nacional de Automação Bancária <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> (CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > ENDEREÇO CLIENTE NO BOLETO) = Altera a exibição do endereço do cliente no boleto gerado. Para o editor de boletos funcionar corretamente, esse campo deve estar na posição "1-Para cada boleto".</p>
+            <br>
+            <p class="desc">
+            <strong>1° Tabela:</strong> Aparecerão todas as contas que podem gerar os boletos. <br>
+            { <br>
+                <strong>Cód:</strong> Código referente ao banco cadastrado no sistema <br>
+                <strong>Nome da conta:</strong> Nome da conta bancária <br>
+                <strong>Nro CC:</strong> Número da conta corrente <br>
+                <strong>Emp:</strong> ??? <br>
+                <strong>Total:</strong> ??? <br>
+                <strong>Pend:</strong> ??? <br>
+                <strong>Filtro:</strong> Mostra quantos boletos serão exibidos na 2° tabela, após a aplicação dos filtros. <br>
+            }
+            <strong>2° Tabela:</strong> Aparecerão todos os títulos do CR que a forma de pagamento seja boleto. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Ao clicar em "gerar/imprimir boletos" todos os boletos apresentados na 2° tabela serão impressos.
+        </p>
+        <br>
+            <strong> <center>Filtro</center> </strong>
+        <p class="desc">
+            <strong>Modelo CNAB:</strong> Modelo utilizado para gerar o boleto e a remessa. <br>
+            <strong>Nome arquivo CNAB a gerar:</strong> Caminho do arquivo onde a remessa será gerada. <br>
+            <strong>Transação:</strong> Permite fazer alterações em boletos já lançados junto ao banco, como dar baixas, alterar vencimento, etc. <br>
+            <strong>Emissão:</strong> Define quem emitirá o boleto. Campo ''T.Emissão'' no cadastro da conta. <br>
+            <strong>Carteira:</strong> Carteira da conta informado pelo cliente <br>
+            <strong>Instr.Cobrança:</strong> Instrução de cobrança enviada ao banco referente ao protento (Cód.IC1 do cadastro de contas). <br>
+            <strong>Emissão inicial | final | Venc. inicial | final | Dostrar docs | Nome cliente:</strong> Informações para filtrar os boletos e remessas. <br>
+            <strong>%Multa | %Juros:</strong> Multa e juros definidos por empresa (Cadastros > Configuraões gerais > Financeiro). <br>
+            <strong>Protestar:</strong> Indica em quantos dias os boletos serão protestados após o vencimento. <br>
+            <br>
+            <br>
+            <strong>Gerar/Imprimir boletos:</strong> Gera e/ou imprimi os boletos. <br>
+            <strong>Gerar arq. remessa:</strong> Gera o arquivo de remessa. <br>
+            <strong>Editar arq. remessa:</strong> Abre o TXT do arquivo de remessa. <br>
+            <strong>Imprimir arquivo:</strong> Gera um relatório de boletos de acordo com o filtro <br>
+        </p>
+    </article>
+
+    <hr>
+</body>
+</html>

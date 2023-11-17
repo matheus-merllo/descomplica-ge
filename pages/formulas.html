@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Fórmulas</span>
+    </header>
+
+    <main class="main">
+        <span class="title"><strong>Conversão de hora</strong></span>
+    </main>
+    <article>
+        <p class="info">Ao fazer cálculos que envolvam tempo, as horas e os minutos são convertidos para inteiros e decimais. 1:30 (uma hora e trinta minutos) seria expresso como 1,5 (uma hora e meia). <br>
+            <br>
+            Para transformar minutos em fração, basta dividir o valor por 60. <br>
+            <br>
+            Para transformar fração em minutos, basta multiplicar o valor por 60. <br>
+            <br>
+            60 minutos ---------- 1 hora. <br>
+            45 minutos ---------- 0,75 hora. <br>
+            1:45 minutos -------- 1,75 hora. <br>
+            15 minutos ---------- 0,25 hora. <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"> <strong>Contribuição marginal</strong></span>
+    </main>
+    <article>
+        <p class="info"> Contribuição marginal = Horas vendidas + Markup
+            <br>
+            1ª FORMA: SUBTRAIR DO PREÇO DE VENDA AS 4 OBRIGAÇÕES: <br>
+            - MATÉRIA PRIMA<br>
+            - TERCERIZAÇÕES<br>
+            - COMISSÕES<br>
+            - IMPOSTOS<br>
+            <br>
+            2ª FORMA: SOMANDO A MÃO DE OBRA (CUSTO DE PRODUÇÃO) E MARK UP REAL (MARK UP APLICADO + JUROS CALCULADOS) <br>                                                                             
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"> <strong>Depreciação</strong></span>
+    </main>
+    <article>
+        <p class="info"> Depreciação = (Valor do imobilizado – Diferença percentual do residual) / Tempo de vida.                                                                           
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"> <strong>Tempo de impressão</strong></span>
+    </main>
+    <article>
+        <p class="info"> Quantidade referente à faixa de impressão / faixa de impressão. Repita o processo até a tiragem estar concluída e some os resultados encontrados. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O campo "Acerto troca bobina" irá interferir no tempo de impressão e também deverá ser calculado (N°impress / "Troca bob.a cada") * tempo de cada acerto.   <br>
+            <br>
+            <strong>Digital:</strong>  Altura do material / faixa de produtividade usada pela máquina no serviço. 
+            <br>                                                          
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"> <strong>preço Kg apara</strong></span>
+    </main>
+    <article>
+        <p class="info"> 
+            O desconto na apara do papel é lançado no preço de custo do produto e o preço de venda será cálculado da mesma forma. <br>
+            <br>
+            O cálculo é feito da seguinte forma: <br>
+            Dentro do orçamento, descubra o valor correspondente ao % do campo "apara" do campo "Peso_mat" e múltiplique o resultado pelo valor da apara definido (CADASTROS > CONFIGURAÇÕES GERAIS > CÁLCULOS > PREÇO KG APARA). <br>                                                              
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"> <strong>Abater CA da CV | CE da CV | CA da CE</strong></span>
+    </main>
+    <article>
+        <p class="info"> 
+            Irá abater o %  da primeira comissão sobre o % da segunda comissão. <br>
+            EX: 20% de CA e 5% da CV <br>
+            0,2 * 5 = 1 <br>
+            5-1 = 4 <br>
+            Ou seja, A comissão do vendedor - comissão da agência = 4. <br>                                                            
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Lâmina</strong></span>
+    </main>
+    <article>
+        <p class="info">Para saber a quantidade de lâminas que um trabalho terá, devemos dividir o número de tiragens pela montagem por folha. <br>
+            N° de tiragens / montagem = N° de lâminas <br>
+            <br>
+            Para saber a quantidade de lâminas que um trabalho com miolo (livros e revistas) sem repetição terá, basta dividir o número de páginas por 2 (frente e verso) e dividir novamente pela montagem. <br>
+            N° de páginas / 2 / montagem = N° de lâminas <br>
+            Ex: 256 / 2 / 4 = 32 lâminas
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Montagem</strong></span>
+    </main>
+    <article>
+        <p class="info">Devemos considerar a folha inteira para descobrir o aproveitamento do papel. Usaremos como exemplo uma folha 66x96 e um trabalho de 20x30.<br>
+            <br>
+            1- Dividir a largura e a altura do trabalho pela largura e altura da folha, para descobrir qual a melhor posição dos impressos na folha. <br>
+            66/30 = 2,2 __________ 96/20 = 4,8 ----- 4 x 2 = 8 pedaços <br>
+            66/20 = 3,3 __________ 96/30 = 3,2 ----- 3 x 3 = 9 pedaços (melhor corte) <br>
+            <br>
+            Isso significa que o melhor aproveitamento da folha é com uma montagem de 9 pedaços.
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Apara</strong></span>
+    </main>
+    <article>
+        <p class="info">Para calcular a perda de material, seguimos a seguinte fórmula: <br>
+            <br>
+            1- Área perda = Área total da folha <span class="coment">(sem converter p/ metros) </span>- área utilizada <br>
+            2- Área utilizada = (Qtd pedaços <span class="coment">(FF) </span> * Largura impresso * Altura impresso) <br>
+            3- Área perda = 6.336 - 5400 = 936 cm2 <br>
+            <br>
+            Percentual de perda = Área de perda / Área total de folha <br>
+            Percentual = 936 / 6.336 = 0,147 <br>
+            0,147 * 100 = 14,7% de perda<br>
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Quebra</strong></span>
+    </main>
+    <article>
+        <p class="info">---
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Prazo de pagamento</strong></span>
+    </main>
+    <article>
+        <p class="info"> 
+            1- Devemos tirar a média do prazo de pagamento lançado no orçamento. <br>
+            2- Dividimos o "TJ" por 30, para descobrir o juros diário. <br>
+            3- Multiplicamos o juros diário pela média de dias do prazo de pagamento. <br>
+            PP = (TJ/30) * (Média PP)
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Preço de venda</strong></span>
+    </main>
+    <article>
+        <p class="info">Precisamos somar o "MUre" com todos os outros índices de comissões e impostos. Após isso, basta seguir a formula para encontrar o fator aplicável. <br>
+            Fator aplicável = 1 - (Índices/100) <br>
+            Preço de venda = Custo total / Fator aplicável <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Acerto</strong></span>
+    </main>
+    <article>
+        <p class="info">
+            Acerto total = Tempo de acerto por cor * (Cores frente + Cores verso) <br>
+            Se o trabalho for tira e retira, só iremos considerar o lado com maior número de cores ao invés de calcular CF X CV.
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>N° entradas</strong></span>
+    </main>
+    <article>
+        <p class="info">Entrada = (Cores frente + Cores verso) / Unidades de impressão.
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Qtd_mat</strong></span>
+    </main>
+    <article>
+        <p class="info">
+            <strong>Un (Offset):</strong> (Quantidade / formato de corte) / montagem * Quebra <br>
+            <br>
+            <strong>Mt2:</strong> (N°_Impr. * largura do material) * Quebra <br>
+            <br>
+            <strong>Rolo:</strong> (N°_Impr. * largura do material) * Quebra <br>
+            <br>
+            <strong>Kg:</strong> ((largura * N°_impr) * gramatura) * Quebra <br>
+            <br>
+            <strong>Digital (maleável):</strong> (Quantidade / montagem * nro lâminas) * altura) + Quebra ini e fim + espaço entre imagens + (tamanho bolsa * quantidade) <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>N° de impressões</strong></span>
+    </main>
+    <article>
+        <p class="info">
+            <strong>Un (Offset):</strong> ((Quantidade / Formato do corte) / montagem) * entradas de máquina <br>
+            <br>
+            <strong>Digital (maleável):</strong> (Quantidade / montagem) * Altura  <br>
+            <br>
+            <strong>Mts:</strong> Quantidade da tiragem / número de pistas <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O número de impressões de um orçamento por metros será alterado pela montagem e pelo número de pistas. <br>
+            <br>
+            <strong>Rolo:</strong> ((Quantidade de rolos * quantidade de etiquetas por rolo) / montagem) * porta clichê <br>
+            <br>
+            <strong>Kg:</strong> Tudo que for cadastrado em KG no sistema, vai afetar orçamentos feitos em KG. Quanto maior o peso, menor será a metragem necessária para  atingir o peso necessário. Para bater esse cálculo, ficará mais fácil se a quebra e a tinta forem removidas do orçamento.<br>
+            <br>
+            (Peso da tiragem / (0,Largura * 0,0gramatura)) / (1-0,apara) <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Para bater o cálculo com outros Kgs adicionados, esses Kgs deverão ser removidos do peso total da tiragem.
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Folhas</strong></span>
+    </main>
+    <article>
+        <p class="info">Para saber a quantidade de folhas que um trabalho usará, devemos dividir o número de tiragens pela montagem por folha. <br>
+            N° de tiragens / montagem <span class="coment">(folha inteira)</span> = N° de folhas necessárias <br>
+            Após isso, basta acrescentar a porcentagem de quebra à quantidade de folhas.
+        </p>
+    </article>
+
+    <hr>
+
+    <main class="main">
+        <span class="title"><strong>Peso do material</strong></span>
+    </main>
+    <article>
+        <p class="info">Para saber o peso total do material usado no trabalho, devemos: <br>
+            <br>
+            1- Descobrir a quantidade de folhas necessárias para a impressão do trabalho <span class="coment">(Quantidade / FF)</span> <br>
+            2- Descobrir a área de uma folha convertendo a largura x altura em metros e multiplincando-as. <br>
+            3- Descobrir o peso de uma folha multiplicando a área pela gramatura. <br>
+            4- Multiplicar o peso de uma folha pela quantidade total de folhas necessárias e acrescentar a porcentagem de quebra. <br>
+        </p>
+    </article>
+
+    <hr>
+
+</body>
+</html>

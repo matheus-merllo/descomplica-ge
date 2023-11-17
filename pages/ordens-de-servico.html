@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Ordens de serviço (O.S.)</span>
+    </header>
+
+    <strong> <center>Situação das OSs</center> </strong>
+    <div>
+        <p class="desc-2">
+            - Aguardando - Quando a OS é gerada. <br>
+            - Em produção - Quando é apontada pelo PCP (inicio da produção). <br>
+            - Produzida - Ao ser baixada pelo PCP (fim da produção). <br>
+            - Bx. parcial - Ao ser baixado parcialmente. <br>
+            - Concluída - Ao ser baixada completamente. <br>
+            - Cancelada - Ao ser cancelada. <br>
+            <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> A situação não pode ser alterada de forma manual. Caso o usuário não tenha o módulo PCP, os apontamentos deverão  ser feitos manualmente pelo campo "Posição atual" dentro da OS. 
+        </p>
+    </div>
+
+    <hr>
+
+    <main class="main">
+        <img class="img" src="../img/ordens-de-servico.jpg" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> Aqui ficarão todas as ordens de serviço geradas pelo sistema. </p><br>
+            <br>
+            <strong> <center>F11-Outras opções</center> </strong>
+            <p class="desc">
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O número da Ordem de Serviço pode conter letra quando ela fizer parte de uma Programação de Produção ou Produção em Lote. <br>
+            <br>
+            <strong>Arquivo de etapas:</strong>(aba "etapas") Irá direcionar para a lista que contém todos as etapas de todas as O.Ss do sistema. É através dela que iremos filtrar e gerar relatórios que envolvam as etapas. <br>
+            <strong>Arquivo de materiais:</strong> (aba "mat. prima") Irá direcionar para a lista que contém todos as materias primas de todas as O.Ss do sistema. É através dela que iremos filtrar e gerar relatórios que envolvam as materias primas. <br>
+            <strong>Arq. prog. produção O.S.:</strong> Direciona o usuário para uma página com todas as O.Ss que tiverem a produção dividida no orçamento ou no próprio menu de O.S. Seremos direcionados a lista de programações de todas as O.Ss. <br>
+            <strong>Baixar auto O.S antigas:</strong> Permite que o usuário dê baixa em lote nas O.Ss antigas. <br>
+        </p>
+        <br>
+            <strong> <center>Menu inferior</center> </strong>
+        <p class="desc"><strong>O.Ss aberto:</strong> Apresenta um relatório de todas as O.Ss dos clientes que estão aguardando produção ou sendo produtivas. <br>
+            <strong>Rótulos:</strong> utilizada para rotular embalagens de serviços que serão entregues aos clientes. <br>
+            <strong>Etiquetas:</strong> utilizado para etiquetar embalagens de serviços (produtos acabados) que serão mantidos em estoque dentro da própria gráfica. Obs.: utilizado apenas quando a versão do GE contratada tem o módulo opcional de Produto Acabado. <br>
+            <strong>Estornar:</strong> Ao estornar uma baixa de uma OS, o pré-faturamento será desfeito, a baixa será desfeita e a situação voltará para "aguardando". Caso o pré-faturamento já tenha sido feito, o estorno não afetará a NF nem o CR. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O PCP pode ser estornado através do estorno da OS. <br>
+            <strong>Baixar OS:</strong> Indica que o serviço será faturado ou entregue ao cliente. Utilizado para indicar a conclusão da produção daquele serviço. Obs.: essa é a principal utilização desse botão, há outras variações de Baixas de Ordem de Serviço, como: Baixa Parcial, Baixar Apenas para Faturamento mantendo em Produção, Baixa Extra, Baixar Programação de Entrega (sub opção), Baixar e Enviar ao Estoque, etc… <br>
+            <strong>Expedir:</strong> utilizado apenas por empresas que têm o departamento de expedição. Indica que o serviço está pronto e aguardando para ser faturado e/ou entregue (baixado). <br>
+            Não enviará informação de baixa para o menu Financeiro. <br>
+            É diferente da opção “Expedição e pacotes”. <br>
+            <strong>xxx:</strong> xxx <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Ao estornar uma baixa, a "posição atual" da OS ficará "estornada". Para mudar isso, basta enrar na OS e alterar o campo "Posição atual".
+            <strong>Cancelar:</strong> Indica que a produção foi cancelada por alguma razão. Usa-se o cancelar para não excluir a O.S. e perder os registros. <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Etiquetas</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/etiquetas.JPG" title="etiquetas">
+    </div>
+    
+    <div>
+        <p class="desc-2"> Só é usado para materiasi de estoque <br>
+            As colunas representam as informações que serão apresentadas na etiqueta. <br>
+            <br>
+            <strong>Saltar etiquetas:</strong> Saltará o número de etiquetas respectivas, deixando o espaço na folha. <br>
+        </p>
+    </div>
+
+    <hr>
+    <hr>
+
+    <strong> <center>Incluir (Geral)</center> </strong>
+    <div class="main">
+        
+        <img class="img" src="../img/ordens-de-servico-inserir.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2"><strong>Nro O.S.:</strong> É gerada automaticamente ou manualmente, porém não podem retroagir mais de 100 O.Ss. O número a O.S. terá letras quando fizerem parte de uma programação de produção ou produção em lote. <br>
+            <strong>Empresa:</strong> Se for alterado no orçamento irá recalcular as tributações e os índices. Se for alterado no menu O.S. não vai alterar os preços. <br>
+            <strong>Situação:</strong> Poderá ser alterada por baixa no próprio menu O.S. ou pelo PCP. <br>
+            <strong>N° orçamentos:</strong> É um atalho para acessar os orçamentos. <br>
+            <strong>Vr. orçamento:</strong> Não se altera, a menos que o valor do orçamento seja alterado. <br>
+            <strong>N° pedido cliente:</strong> É um código do próprio cliente, caso ele deseje informar na O.S. Se informado, irá preencher o campo "N° ped. cliente" no item da NF.<br>
+            <strong>Repetido:</strong> Será marcado caso uma O.S. seja duplicada. Pode ser marcada manualmente também. <br>
+            <strong>Repetiu/erro:</strong> Seve ser marcado se a O.S. for um retrabalho devido a algum erro. Essa informação sairá em relatórios. <br>
+            <strong>O.S. grade | N° grade:</strong> Estão relacionadas aos orçamentos com grades de serviço. <br>
+            <strong>N° ped. WTP:</strong> Não funciona! (projeto descontinuado). <br>
+            <strong>Cód. cliente:</strong> É possívelalterar o cliente da O.S., mas isso não irá alterar o cliente do orçamento. <br>
+            <strong>Classificação:</strong> Segmentação. Pode vir calculado do "Tipo de orçamento". <br>
+            <strong>Título:</strong> Carrega do "título do serviço" no orçamento. <br>
+            <strong>Valor O.S.:</strong> Esse valor pode ser alterado manualmente na O.S. ou automaticamente de acordo com a quantidade de baixas de O.S. <br>
+            <strong>Fluxo cx:</strong> Se é para considerar ou não essa O.S. no "RELATORIO FIXO > FLUXO DE CAIXA". <br>
+            <strong>Vendedor | %CV:</strong> Podem ser alterados na O.S. A %CV irá refletir diretamente no "FINANCEIRO > PAGAMENTO DE COMISSÕES". <br>
+            <strong>Dt. aprovação | aprovado por:</strong> De forma manual, define quando a O.S. será aprovada.<br>
+            <strong>Dt. previsão cliente | Entrega:</strong> Pode ser preenchida uatomaticamente caso o campo "PE" do orçamento seja preenchido. <br>
+            <strong>Atraso:</strong> Começa a ser contada a partir do fim da data prevista até a data que a O.S. é baixada, chegando a um atraso médio. <br>
+            <strong>PCP:</strong> Irá lançar a O.S. na fila de produção do PCP. <br>
+            <strong>Prev. ini. pré. impr | Impressão | Acabamento:</strong> Podem ser preenchidos manualmente ou automaticamente pelo PCP. <br>
+            <strong>Dt. ini. calculado | fin. calculado:</strong> Determina o inicio e o fim da O.S. de forma completa. <br>
+            <strong>Calculado por | Situação PCP:</strong> Só é alterado pelo PCP. <br>
+            <strong>Setor atual | posição atual:</strong> Indica o exato processo que a O.S. se encontra. <br>
+            <strong>Observações gerais:</strong> São importados da aba "F9" Obs de item interno. <br>
+            <strong>Ot. produção:</strong> ??? <br>
+            <strong>Valor aberto:</strong> Valor que está sendo produzido. <br>
+            <strong>Valor baixado:</strong> Valor já produzido. <br>
+            <strong>Qt. final prod:</strong> Será a quantidade total baixada. <br>
+            <strong>Qt. expedida | Dt. Últ. Expedição | Expedida por:</strong> Só serão preenchidas pelo PCP. <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <strong> <center>Etapas</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/ordens-de-servico-etapas.JPG" title="etapas">
+    </div>
+    
+    <div>
+        <p class="desc-2">Aqui serão apresentadas todas as etapas de todas as OSs internas e de terceiros. É possível adicionar etapas na OS através da primeira tabela, porém, não é o usual, essa etapa não será cobrada no orçamento.  <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Significado dos códigos: <br>
+            - 100 a 199: pré-impressão <br>
+            - 200 a 299: Impressão <br>
+            - 300 a 399: Verniz <br>
+            - 400 a 499: Acabamento <br>
+            " < " e " > " indicam as precedências entre os setores da OS. Não indica a precedência entre processos. As situações das etapas só são alterados pelo PCP.
+            <br>
+            <strong>Nro:</strong> xxx <br>
+            <strong>Tipo:</strong> xxx <br>
+            <strong>Calc:</strong>  Indica a linhaque a etapa é apresentada no manu "F5" do orçamento. <br>
+            <strong>Plano:</strong> Indica o plano do orçamento. <br>
+            <strong>Imprimir:</strong> Sefine se a etapa será impressa na OS. <br>
+            <strong>Máquina/ cálculo:</strong> Indica qual máquina foi usada no cálculo da etapa. <br>
+            <strong>Terceiros:</strong> Indica se a etapa será feita por terceiros ou não, também habilita e desabilita alguns campos da OS. <br>
+            <strong>Ac. previsto:</strong> Tempo total de acerto previsto. <br>
+            <strong>Tot. previsto:</strong> Tempo total gasto na etapa. <br>
+            <strong>Ac. efetivo | Total efetivo:</strong> São retirados do pós-cálculo <br>
+            <strong>Custo/ un:</strong> Indica o custo hora. <br>
+            <strong>Custo total:</strong> Multiplica o "custo/ un" pelo "tot. previsto"<br>
+            <strong>Pessoas:</strong> Mostra o número de pessoas involvidas no processo. Só faz diferença para etapas etapas hora x homem. <br>
+            <strong>Impressões:</strong> Mostra o número total de impressões. <br>
+            <strong>Cads:</strong> Mostra o número total de cadernos. <br>
+            <strong>Entr:</strong> Mostra o número de entradas de máquina da etapa. <br>
+            <strong>Observações p/ OS:</strong> Inseri uma informação na frente da etapa na ordem de serviço. <br>
+            <strong>Observações p/ PCP:</strong> Inseri a observação no PCP. Será visualizado no mapa do PCP e no apontamento (apontar OS). <br>
+            <strong>Faca:</strong> Vincula a faca usada na etapa. <br>
+            <strong>Cad. fornecedor 3os:</strong> Seleciona um fornecedor para um trabalho terceirizado. Pode ser vinculado por padrão 
+            diretamente no menu "cadastro de máquina". <br>
+            <strong>Qtdade OS 3os:</strong> Quantidade enviada ao terceirizado. <br>
+            <strong>Quebra enviada 3os:</strong> Quantidade de folhas para quebra enviada ao terceirizado. <br>
+            <strong>Dt. entrega prevista:</strong> Previsão de entrega do terceirizado. <br>
+            <strong>Dt. entrega efetiva:</strong> Data que, efetivamente, o trabalho foi entregue. <br>
+            <strong>Qt. devolvida:</strong> Quantidade total devolvida. <br>
+            <strong>Dt. 1° pagamento :</strong> Ao ser informado, irá lançar os valores para o "contas a pagar" <br>
+            <strong>Parcelas:</strong> Auxilia o campo anterior. <br>
+            <br>
+            <strong>Descrição:</strong> ??? <br>
+            <strong>L1 | L2:</strong> Largura x Altura. <br>
+            <strong>FF:</strong> Formato final (Quantas folhas cabem no formato 1 da folha). <br>
+            <strong>F1:</strong> ??? <br>
+            <strong>QVC:</strong> Quantidade de vezes na chapa. <br>
+            <strong>TR:</strong> Informa se o plano tem tira-retira. <br>
+            <strong>NPC:</strong> Número de páginas por chapa (mesmo valor da montagem). <br>
+            <strong>Ab1 | Ab2:</strong> Abertura (lado 1 x lado 2) <br>
+            <strong>NCF:</strong> Número cores frente <br>
+            <strong>NCV:</strong> Número cores verso <br>
+            <strong>Págs:</strong> ??? <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <strong> <center>Matéria prima  </center> </strong>
+    <div class="main">
+        <img class="img" src="../img/ordens-de-servico-mat-prima.JPG" title="matéria prima">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Tipo:</strong> Seleciona o tipo da matéria prima. <br>
+            <strong>Cód. do estoque:</strong> Vincula o material cadastrado no "substrato/ materiais". <br>
+            <strong>Centro custo:</strong> Serão indicados os centros de custos. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Só os substratos são atrelados ao centro de custo.<br>
+            <strong>Qtd. empenhada:</strong> Quantidade que será empenhada no estoque. <br>
+            <strong>Baixa parcial:</strong> Baixa de uma parte do empenho. <br>
+            <strong>Fornecido:</strong> Indica se o material será fornecido pelo cliente. <br>
+            <strong>Qtd. Líquida:</strong> Quantidade sem o desconto de quebra. <br>
+            <strong>Qtd. total efetiva:</strong> Quantidade total produzida. <br>
+            <strong>Custo un:</strong> Custo unitário. <br>
+            <strong>Custo total:</strong> (Custo unitário x quantidade empenhada). <br>
+            <strong>Observações OS:</strong> Inseri uma observação na frente da matéria prima. <br>
+            <strong>Imprimir:</strong> Habilita a impressão das informações. <br>
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

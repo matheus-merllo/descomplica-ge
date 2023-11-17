@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Cadastro de estoque</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/cadastro-de-estoque.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> Aqui ficarão todos os materiais cadastrados no sistema, desde as materias primas, até os materiais de escritório que não influenciarão diretamente a produção. <br></p>
+            <br>
+            <strong> <center>Menu inferior</center> </strong>
+            <p class="desc">
+            <strong>Produzir/gerar OS:</strong> Essa opção irá gerar uma OS e abastecer o estoque com o produto selecionado. O pedido de saída ainda deverá ser feito pelo menu "Estoque > Pedidos de produtos". <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Para habilitar essa opção, o campo "Orçamento base" deverá ser preenchido com o orçamento base da para produção do item. <br>
+            <br>
+            <strong>Cortar bobina:</strong> Para cortar bobinas é necessário que o campo "apara" do cadastro, esteja marcado. Selecione a tesoura e defina a quantidade que será cortada. Ao cortar uma bobina, o sistema irá gerar movimentos de saída da diferença da bobina cortada e movimentos de entrada das novas bobinas feitas, criando os novos cortes no cadastro do estoque. (CADASTROS > CONFIGURAÇÕES GERAIS > ESTOQUE > LARGURA MIN. APARA DE BOBINAS) Define uma largura mínima que será descartada no corte das bobinas.<br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Quando for cortar somente uma parte da bobina, os metros lineares deverão seguir a proporção dos mt2 indicados, da seguinte forma: (Largura do material / "Qtdade a cortar"). O resultado dessa conta deverá ser preenchido nos campos dos cortes. <br>
+            <br>
+            <strong>Estoque abaixo mínimo:</strong> ??? <br>
+            <strong>Relat.por empresa:</strong> ??? <br>
+            <strong>imprimir etiquetas:</strong> ??? <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Dados (incluir)</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/cadastro-de-estoque-incluir.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Código:</strong> ??? <br>
+            <strong>Tipo material:</strong> Deve ser o mesmo substrato que foi cadastrado em materiais/ substratos. <br>
+            0 - Substrato: É o material onde será feita a impressão. <br>
+            1 - Chapa: É a chapa do CTP. Chapas de PVC são substratos. <br>
+            2 - Tinta: Não gera empenho, pois são difíceis de mensurar. As baixas sãofeitas por latas. <br>
+            3 - Mat.auxiliar: São os materiais auxiliares cadastrado na aba "outros" do materiais/ substratos. <br>
+            4 - Prod.gráfica (É um produto genérico que a gráfica fabrica e vende para outras gráficas ou clientes) <br>
+            5 | 6 | 7 | 9: São relacionados aos produtos acabados. <br>
+            8-Mat.Escrt/outros: Qualquer material de escritório genérico. Impossibilita a geração de emprenho. <br>
+            <strong>Tipo substrato:</strong> Informa o tipo do substrato. <br>
+            <strong>Cód. mat. orçamento:</strong> Possibilita a realização do emprenho de forma automática. <br>
+            <strong>Fração:</strong> Possibilita o controle do material de forma fracionada. Não é usado em materias com controle por unidade. <br>
+            <strong>Apara:</strong> Só é usado com bobinas. <br>
+            <strong>Gramatura:</strong> Indica a gramatura. <br>
+            <strong>Largura | Altura:</strong> Dimensões do material. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> O estoque sempre trabalhará com milímetros. <br>
+            <strong>espessura:</strong> É usado quando o material é do tipo "Rígido digital". <br>
+            <strong>Fibra:</strong> Indica o lado da fibra do papel. <br>
+            <strong>FSC:</strong> É um selo de reflorestamento. Indica a porcentagem do índice de reflorestamento. <br>
+            <strong>Descrição:</strong> Ao escrever o nome do papel, o sistema completará o restante automaticamente com a gramatura, largura e altura. <br>
+            (CADASTROS > CONFIGURAÇÕES GERAIS > ESTOQUE > NÃO COMPLETAR DESC.EST.C/GRAM.+LARG).  <br>
+            <strong>Descrição na NF:</strong> ??? <br>
+            <strong>Un.uso:</strong> Como o material será usado na gráfica. <br>
+            <strong>Un.compra:</strong> Como o material é comprado. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> É possível usar as unidades cadastradas a partir da tabela <br>
+            (FINANCEIRO > CADASTROS FINANCEIRO > TABELAS AUXILIARES NF > 6-UNIDADES) <br>
+            <strong>Qt/un.compra:</strong> Especifíca quantas unidades de uso vem por unidade de compra. <br>
+            <strong>Qt.pr/Qt.venda:</strong> É usado por produtos acabados. <br>
+            <strong>Peso un:</strong> Indica o peso unitário do substrato. <br>
+            <strong>Detalhes:</strong> Detalhes <br>
+            <strong>Localização:</strong> Informa a localização física do material do estoque. <br>
+            <strong>Imune:</strong> Indica se o material é imune a impostos.  <br>
+            <strong>Grupo 1 | Grupo 2:</strong> Agrupa os substratos (segmentação) <br>
+            <strong>Cód. pl. contas:</strong> Segmentação das despesas. Sempre que esse material for comprado, ele será vinculado a um plano de contas que pode ser definido nos seguintes campos.  <br>
+            <strong>Pl.contas:</strong> (FINANCEIRO > CADASTROS FINANCEIRO > PLANO DE CONTAS). <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> (CADASTROS > CONFIGURAÇÕES GERAIS > ESTOQUE) - Nessa tabela será feita a automatização da segmentação dos materiais de acordo com o tipo de material.
+            <strong>Orçamento base:</strong> Produto acabado. <br>
+            <strong>Obs. padrão na OS:</strong> Produto acabado. <br>
+            <strong>Ficha tec. padrã OS:</strong> Produto acabado <br>
+            <strong>Faca:</strong> Produto acabado <br>
+            <strong>Grupo anilox:</strong> Produto acabado <br>
+            <strong>Validade:</strong> Indica uma validade para o material, caso necessário. <br>
+            <strong>N°Últ.OS:</strong> Produto acabado. Indica a última produção do item. <br>
+            <strong>Qtd.estoque:</strong> A cada movimento, atualiza a quantidade do estoque. <br>
+            <strong>Qtd.empenho:</strong> ??? <br>
+            <strong>Est-empenho:</strong> ??? <br>
+            <strong>Qtd.produção:</strong> ??? <br>
+            <strong>Qtd.comprada:</strong> ??? <br>
+            <strong>Preço ponderado:</strong> Valor do estoque considerando uma média de todas as entradas do estoque, não só a última. Nos produtos acabados, esse valor vem do campo "custo previsto" / quantidade da OS. <br>
+            <strong>Pr.venda:</strong> Preço de venda de produtos finalizados. Pode trazer o valor diretamente da OS, se ao baixar a OS esteja marcado o campo "Atualizar PV estoque" (Esse campo so pode ser alterado se as configurações gerais permitirem (cadastros > configurações gerais > produção > não permitir atualizar PV estoque na bx)).<br>
+
+            <strong>Detalhes:</strong> É usado em flexografia. <br>
+            <strong>Pr.últ.compra :</strong> (custo efetivo) preço de custo + comissões + impostos <br>
+            <strong>Qtd.produção:</strong> ??? <br>
+            <strong>Qtd.comprada:</strong> ??? <br>
+            <strong>Tipos de itens para kit:</strong> Produto gráfica, produto cliente, revenda. <br>
+            <strong>GTIN:</strong> É o código que irá gerar o código de barras dos produtos finalizados. <br>
+
+            <strong>Contratos revisões (tabela):</strong> É usada para vincular ao item de produção de um cliente, contratos ou revisões específicas do item. Os campos dos contratos e revisões devemser preenchidos e alterados de foma manual. <br>
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

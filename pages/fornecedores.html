@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Fornecedores, Vendedores e agências</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/fornecedores.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> Aqui ficará a lista com todos os fornecedores, vendedores e agências cadastrados no sistema. <br>
+            <br>
+            Todas as outras opções funcionarão da mesma forma do cadastro do cliente. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Quando o cliente diz: "Dar entrada do xml do fornecedor no financeiro", ele se refere ao campo "Financeiro > NFs de fornecedores > importar XML". <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Incluir (dados gerais)</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/fornecedores-incluir.JPG" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2"><strong>Tipo:</strong> (Com.Especial) receberá comissionados internos e especiais <br>
+            <strong>Situação:</strong> Os fornecedores suspensos ou inativos serão impedidos de emitir ordem de compras ou dar entrada de material no estoque. Se o usuário não utilizar o menu "estoque" servirá apenas para filtros e relatórios. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span>Fornecedores e comissionados estão juntos no mesmo menu, pois ambos geram despesas para a gráfica. No GS, eles ficam separados. <br>
+        <br>
+            <Strong>Grupo1/2:</Strong> Segmentam os fornecedores em grupos. Não são os mesmos grupos dos clientes. <br>
+            <strong>Prazo pgto padrão:</strong> Será importado no prazo de pagametno de um fornecedor. <br>
+            <strong>Cód. plano contas padrão:</strong> Vincula um fornecedor a um plano de contas. Será carregada automaticamente no contas a pagar. <br>
+            <strong>Banco pgto padrão:</strong> Informa de qual conta o dinheiro sairá para pagar os fornecedores. <br>
+            <strong>Cobrança padrão:</strong> Cobrança padrão dos pagamentos realizados. <br>
+            <br>
+            <strong>CFOP entrada padrão:</strong> Irá preencher automaticamente o campo CFOP destino ao importar o XML da NFe para aquele fornecedor. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> <Strong>CFOP:</Strong> Código fiscal de operações e prestações. <br>
+            <strong>N°Bco:</strong> Número do banco <br>
+            <strong>Certificações ISO:</strong> Certificações de qualidade que o fornecedor possui. <br>
+            <br>
+            <strong>RNTRC:</strong> Registro nacional de transportadores rodoviários de carga. <br>
+            <strong>Permite CP com doc. duplicado:</strong> Permite queo usuário faça varias entradas no contas a pagar com o mesmo número de nota. <br>
+            <strong>Dt.Ult.Contato:</strong> É atualizado manualmente ou quando o usuário gera uma O.S. <br>
+            <strong>Dt.Ult.Compra:</strong> É atualizado manualmente ou quando o usuário gera uma entrada. <br> 
+            <strong>Contatos:</strong> (tabela) - Devem ser cadastrados os contatos dos fornecedores. <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <strong> <center>Vendedor/agência</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/vendedores-incluir.JPG" title="vendedor/agência">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Com.padrão:</strong> Define a comissão padrão atribuida a esse vendedor. <br>
+            <strong>Encargos:</strong> Serão preenchidos quando a comissão do vendedor tiver encargos. <br>
+            <strong>Markup padrão:</strong> Só será habilitado para agência e comissão especial. <br>
+            <Strong>Forma de pagamento:</Strong> Influenciará diretamente o campo "financeiro > pagamento de commisões" <br>
+            <Strong>Dia pgto:</Strong> Defini o dia de pagamento da comissão. <br>
+            <strong>Com. de títulos:</strong> <br>
+            - (Liquidados) A comissão será paga após o pagamento do título. <br>
+            - (Emitidos) A comissão será paga quando o título for emitido. <br>
+            <strong>Reduzir/ Aumentar CV cf redução de MU:</strong> Reduz a comissão de venda conforme a redução do markup. <br>
+            <strong>% Reduzir na CV:</strong> Essa porcentagem irá incidir sobre a diferença percentual do novo markup. <br>
+            Exemplo: Imagine um orçamento com MU=50% e CV=40%, teve redução de 10% do MU, logo, 50% da redução de 10% é igual a 5% (o "% reduzir no CV do vendedor era 50%"), ou seja, será reduzido da CV 5%, e então, o CV passará a ser 5% no final dos cálculos. A mesma lágica valerá para o "% Repasse MU" <br>
+            <strong>%Com.min. | %Com.máx:</strong> Percentual mínimo e máximo aplicado ao vendedor. <br> 
+            <strong>Cód.cad.cliente/ Cód vendedor:</strong> Só são habilitados para agências. Caso a agência também for cliente da gráfica, ela será vinculada aqui. Caso a venda seja feita por uma agência e um vendedor também tenha que receber comissões, ela será vinculada aqui. <br>
+            <strong>Cód.especial:</strong> Vincula um comissionado especial a um vendedor. EX: Um gerente que receberá uma comissão sobre cada venda feita. Será indicado aqui, somente para ativar o percentual da comissão, porém, o comissionado específico (especial ou agência) deverá ser indicada ao gerar a O.S. <br>
+            <strong>Descrição carta proposta:</strong> Deverá ser preenchido com o cargo do funcionário. Se estiver em branco, o vendedor não será mostrado na carta proposta. <br>
+            <strong>Imprimir fone carta proposta:</strong> Indica se o telefone será apresentado ao lado do nome do funcionário na carta proposta. <br>
+            <br>
+            <br>
+            A primeira tabela mostra as metas e quanto foi vendido pelo comissionado. <br>
+            A segunda tabela é para acrescentar contatos que serão visitados pelo vendedor/representante. 
+        </p>   
+    </div>
+
+    <hr>
+
+    <strong> <center>Compras</center> </strong>
+    <div class="main-2">
+        <img class="img" src="../img/fornecedores-incluir-compras.JPG" title="compras">
+
+        <div>
+            <p class="desc-2">Aqui ficarão todas as OCs feitas para o fornecedor.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <strong> <center>Financeiro</center> </strong>
+    <div class="main-2">
+        <img class="img" src="../img/fornecedores-incluir-financeiro.JPG" title="financeiro">
+
+        <div>
+            <p class="desc-2">Serão apresentados todos os adiantamentos feitos para os fornecedores e adiantamentos de comissões feitas aos vendedores. Além dos CPs referentes aos fornecedores. <br>
+                <br>
+                <strong>CP em atraso:</strong> São as contas a receber atrasadas. <br>
+                <strong>CP a vencer:</strong> São as contas a receber que não foram pagas, mas que ainda não venceram. <br>
+                <strong>CP aberto:</strong> (CP em atraso + CP a vencer). <br>
+                <strong>CP liquidado:</strong> São todas a contas a receber que foram pagas. <br>
+                <strong>CP total:</strong> (CP aberto + CP liquidado). <br>
+                <strong>Atraso médio:</strong> É o atraso médio dos títulos do CP. <br>
+                <br>
+                <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Caso algum campo de totais não esteja apresentando valores, provavelmente o valor ultrapassou o máximo de caracteres aceitos pelo campo. Essa informação continuará disponível no respectivo menu.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <strong> <center>Avaliações/ não conformidades</center> </strong>
+    <div class="main-2">
+        <img class="img" src="../img/fornecedores-incluir-avaliacoes.JPG" title="avaliações/ não conformidades">
+
+        <div>
+            <p class="desc-2"> ---
+
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img" src="../img/fornecedores-incluir-notas-fiscais.JPG" title="notas fiscais">
+
+        <div>
+            <p class="desc-2"><strong>Estoque:</strong> Serão apresentadas todas as NFs de fornecedores importadas.<br>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+</body>
+</html>

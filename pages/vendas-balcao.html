@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Vendas de balcão</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/vendas-balcao.jpg" alt="">
+    </main>
+
+    <br>    
+    <strong> <center>Menu inferior</center> </strong>
+        <p class="desc">
+            <strong>Abrir caixa:</strong> Abrir o caixa permite que o pagamento seja alterado e o pedido seja concluido <br>
+            <strong>Relat.produtos:</strong> Permite ver a diferença preço de venda x custo <br>
+            <strong>Relat.caixa:</strong> Permite ver as movimentações do caixa <br>
+            <strong>Lançar CR mensalistas:</strong> Baseado no campo (clientes > alterar/incluir > Pg.balcão) mostrará os títulos que poderão ser lançados no CR. <br>
+            <br>
+        </p>
+
+    <article>
+        <p class="desc">
+            <strong>NFCE:</strong>Permite emitir cupons fiscais. Para emitir esses cupons algumas configurações devem ser preenchidas. Esses dados são informados pela contabilidade do cliente. <br>
+            (Cadastros > Configurações gerais > NFe) {<br>
+            Ident.CSC: <br>
+            CSC(cód. Segurança contribuinte) p/NFCE: <br>
+            Série NFCE: <br>
+            N prox.NFCE: <br>
+            } <br>
+            <br>
+            É usado para vendas diretas de produtos acabados. <br>
+            Não irá gerar empenho, mas irá gerar saída do estoque. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Reforço: Abastecer o caixa interno com mais dinheiro | 
+            Sangria: Retirar dinheiro do caixa interno <br>
+            <br>
+            Todos os dias é necessário abrir o caixa, só é possível concluir a venda com o caixa aberto. <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Vendas balcão</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/vendas-balcao-inserir.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Para fazer a venda balcão é possível importar o cadastro do cliente ou fazer a venda balcão somente com o nome e CPF. <br>
+            <br>
+            <strong>Tipo:</strong> Venda (venda padrão, retira material do estoque) <br>
+            Orçamento (não permite concluir a venda, pois é somente um orçamento) <br>
+            Devolução (Retorna um produto para o estoque) <br>
+            <strong>Caixa:</strong> Informa o número do caixa  <br>
+            <strong>N°Lanc.NFe:</strong> Vincula o número da NFe. <br>
+            <strong>Observações:</strong> Permanece nesta página <br>
+            <strong>Forma pgto:</strong> Somente as opções "C.receber" e "mensalista" vão para o contas a receber e irão gerar movimentos bancários <br>
+            <strong>Parcs:</strong> Indica o número de parcelas. O número de parcelas lançadas no CR será correspondente ao informado <br>
+            <strong>Valor total:</strong> Valor total da venda (sem desconto) <br>
+            <strong>Descontos:</strong> Desconto em valor <br>
+            <strong>%Desc:</strong> Desconto em % <br>
+            <strong>Valor líquido:</strong> Valor com o desconto aplicado <br>
+            <strong>Pg.outros:</strong> Indica o valor a ser pago por algum meio que não seja dinheiro <br>
+            <strong>Pg.dinheiro:</strong> Informa o pagamento em dinheiro <br>
+            <strong>Troco:</strong> Informa o troco para pagamentos em dinheiro <br>
+            <strong>Pg.OK:</strong> É preenchido com “sim” quando o pagamento é concluído <br>
+            <strong>Cód.CR:</strong> Código do CR, caso a forma de pagamento seja “C.receber” ou “mensalista” <br>
+            (clientes > alterar/incluir > Pg.balcao) Indica um período em dias para pagamento desse cliente (usado para mensalista no módulo balcão) <br>
+            <br>
+            <strong>Concluir pgto:</strong> Após concluir o pagamento, não será possível alterá-lo <br>
+            <strong>Concluir venda:</strong> Só é possível concluir a venda se o tipo for venda. O registro será lançado nas NFs (estaduais). <br>
+            <strong>Nova venda:</strong> Apagará as informações inseridas sem alterar informações de uma venda já realizada. <br>
+            <strong>Novo orçamento:</strong> Apagará as informações inseridas sem alterar informações de um orçamento já realizado. <br>
+            <strong>Imprimir:</strong> Permite imprimir um recibo da venda <br>
+        </p>
+    </div>
+
+    <hr>
+</body>
+</html>

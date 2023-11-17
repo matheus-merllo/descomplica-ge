@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Descomplica GE</title>
+</head>
+<body>
+    
+    <header class="menu-bar menu-bar-2 ">
+        <span class="material-symbols-outlined"><a class="menu-bar-2" href="../index.html">keyboard_double_arrow_left</a></span>
+        <span class="header-title">Clientes</span>
+    </header>
+
+    <main class="main">
+        <img class="img" src="../img/clientes.JPG" alt="">
+    </main>
+
+    <article>
+        <p class="desc"> Aqui ficará a lista com todos os clientes cadastrados no sistema. No menu de filtro, temos opções para todos as páginas e após o traço horizontal, temos opções de filtros exclusivos para cada página. </p><br>
+            <br>
+            <strong> <center>F11 - opções</center> </strong>
+            <p class="desc">
+            <strong>Campos na grade:</strong> Altera os campos (colunas) apresentados na grade de acordo com a preferência do usuário. <br>
+            <strong>Substiruir campos:</strong> Substitui todos os valores de determinado campo por um novo valor. É usado apenas pelo suporte em situações de corrompimento de dados do sistema. Jamais será usado para corrigir falha ou má utilização do usuário. <br>
+            <strong>Excluir por filtro:</strong> Exclui um lote de registros por filtro específicos e seguem as mesmas regras do campo "substituir campo". <br>
+            <strong>Reindexar:</strong> Serve para recalcular os modulos e é usado em caso de comportamento estranho do sistema. É obrigatório que os usuários não estejam usando o sistema no momento da reindexação. Deve ser usado apenas no computador do servidor do sistema, exceto no GS e na versão WEB, nesses casos os arquivos podem ser reindexados em qualquer computador, porém ninguém poderá estar usando o sistema. <br>
+            <strong>Importar dados:</strong> É usado no início de uma implantação para importar os dados de clientes e fornecedores de outro sistema para o GE. Esse arquivo deverá estar no formato "TXT". <br>
+            <strong>Incluído/ alterado por:</strong> ou (Alt+Enter) - Inclui uma coluna que mostrará o último usuário que alterou o arquivo. <br>
+            <strong>Atraso médio:</strong> Envia a respectiva informação para a aba financeiro do cadastro do cliente. Ela será usada para cálculo do atraso médio no orçamento. Esse valor não é atualizado automaticamente! <br>
+            <strong>Suspender/ inativar lote:</strong> Suspende ou inativa os clientes por lote. <br>
+            <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Para esta opção, o sistema irá levar em consideração os títulos EM ABERTO lançados no "contas a receber" atrasados, e não, o campo "Atraso médio" no cadastro do cliente. O campo "Atraso médio" será utilizado para filtros, relatórios e preencher o parâmetro "AT" do orçamento. <br>
+            <strong>Substituir vendedor:</strong> Trânsfere todos os clientes da carteira de um vendedor para outro vendedor, em um caso de demissão por exemplo. <br>
+        </p>
+        <br>
+        <br>
+            <strong> <center>Menu inferior</center> </strong>
+        <p class="desc">
+            <strong>Posição geral CRM:</strong> --- <br>
+            <strong>Posição produtos:</strong> --- <br>
+            <strong>OS/Orcs abertos:</strong> Mostra todos os trabalhos em produção de determinado cliente de forma prática. <br>
+            <strong>Enviar e-mail:</strong> É somente um atalho para abrir o aplicativo de email. O Outloock deve ser definido como programa padrão para essa opção funcionar. <br>
+            <strong>Imprimir:</strong> Possibilita a impressão das informações dos cliente, não é possível alterar os campos mostrados nesse relatório. <br>
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Incluir</center> </strong>
+    <div class="main">
+        <img class="img" src="../img/clientes-incluir.jpg" title="incluir">
+    </div>
+    
+    <div>
+        <p class="desc-2">
+            <strong>Código:</strong> Código do cliente no sistema <br>
+            <strong>Situação:</strong> Situação do cliente <br>
+            <strong>Dt.situação:</strong> Data da alteração da situação <br>
+            <strong>Motivo situação:</strong> Motivo da alteração da situação <br>
+            <strong>Grupo 1 | 2:</strong> Segmentação do cliente. 1- mais genérico, 2- mais específico <br>
+            <strong>ABC:</strong> Categoriza os clientes em níveis e é usado para filtros e relatórios. É alterado manualmente pelo cadastro do cliente ou automaticamente pelo menu (financeiro > relatórios fixos > curva ABC) <br>
+        <span class="material-symbols-outlined" style="color: goldenrod;">grade</span>Deve ser marcado o campo "<input type="checkbox"> Lançar ABC no cadastro" para o índice aparecer no cadastro do cliente e ser usado nos filtros e relatórios.</p>
+        <p class="desc-2"><strong>Inscr. estadual:</strong> Só é necessário para empresas contribuintes com o ICMS (estadual).</p>
+        <p class="desc-2"><strong>Inscr. municipal:</strong> Só é necessário para empresas contribuintes com o ISS (municipal). <br>
+        <strong>Contrib.ICM:</strong> Indica se a empresa é contribuinte de ICMS. <br> 
+        <strong>Inscr.mun./Id.extr:</strong> Inscrição municipal ou identificação estrangeiro, caso seja cliente do exterior. <br> </p>
+        <p class="desc-2"><strong>Contato compras:</strong> Sairá impresso na carta proposta do orçamento.</p>
+        <p class="desc-2"><strong>Contato financeiro:</strong> Sairá impresso nas cartas de cobrança.</p>
+        <p class="desc-2"><span class="material-symbols-outlined" style="color: goldenrod;">grade</span> <strong>Padrão de endereço:</strong> Rua, número - complemento. | O número sempre deverá vir após a virgula e o complemento após o traço. Caso não haja número, devemos acrescentar "S/N" após a vírgula. <br>
+            Para clientes no exterior, acrescentamos "EX" no campo "UF1"(estado).</p> 
+        <p class="desc-2"><strong>Endereço faturamento:</strong> Será mostrado no faturamento da nota.</p>
+        <p class="desc-2"><strong>Endereço cobrança:</strong> Será mostrado na carta de cobrança.</p>
+        <p class="desc-2"><strong>Endereço entrega:</strong> Será mostrado na entrega da NF. <br>
+            <strong>Ref.endereço ou nome país:</strong> Endereço ou nome do país. <br>
+            <strong>Cód país:</strong> Informa o código do país <br>
+            <strong>Transport.padrão:</strong> Define uma transportadora padrão. <br>
+            <strong>Frete padrão:</strong> Defini se o frete padrão é incluso ou a pagar <br>
+        <p class="desc-2"><strong>Distância:</strong> Deve ser acrescentado manualmente e pode ser usado em filtros, relatórios e cálculos programáveis.</p>
+        <p class="desc-2"><strong>Nro Suframa:</strong> Só é preenchido para clientes no zona franca de Manaus.</p>
+        <p class="desc-2"><strong>Vendedor:</strong> Predefine um vendedor para esse cliente.</p>
+        <p class="desc-2"><strong>%CV | %CA | %CE | %CI |:</strong> Caso marcado, irá sobrepor a comissão estipulada no cadastro do próprio vendedor. Todas as outras comissões funcionarão da mesma forma.</p> 
+        <p class="desc-2"><strong>Prazo pgto padrão:</strong> Defini um prazo de pagamento padrão para o orçamento.</p>
+        <p class="desc-2"><strong>Markup:</strong> Markup padrão do cliente.</p>
+        <p class="desc-2"><strong>Crédito máximo:</strong> Defini um crédito máximo para o cliente.</p>
+        <p class="desc-2"><strong>Atraso médio:</strong> Atraso médio do cliente. Será considerado no orçamento.</p>
+        <p class="desc-2"><strong>Cobrança padrão | Conta padrão:</strong> Padronizações específicas para o cliente.</p>
+        <p class="desc-2"><strong>Pg. Balcão | %Desc.balcão:</strong> ---</p>
+        <p class="desc-2"><strong>Dt.cadastro:</strong> Data do cadastro.</p>
+        <p class="desc-2"><strong>Dt.últ.contato:</strong> Data do último orçamento feito.</p>
+        <p class="desc-2"><strong>Dt.últ.compra:</strong> Data da última OS gerada.</p>
+        <p class="desc-2"><strong>Empr. padrão:</strong> Escolhe o CNPJ que fára o trabalho daquele cliente. Isso pode variar impostos no orçamento.</p>
+        <p class="desc-2"><strong>Data última campanha | visita | próx visita | próx contato:</strong> São acrescentados automaticamente através do menu CRM.</p>
+        <p class="desc-2"><strong>Cobrança padrão:</strong> Dentro do tipo de cobrança, irá especificar como será feito o recebimento. <br>
+            Exemplo: Banco simples > depósito, transferência, boleto e pix. <br>
+            - Banco descontada: Título que teve o pagamento antecipado. <br>
+            - Factoring: Título que teve o pagamento antecipado junto a uma empresa que não é uma instituição financeira. <br>
+            - Banco caucionada: Título que foi acordado em ser recebido mediante uma garantia/ caução. <br>
+            - Protesto: Título que foi enviado ao cartório para registro nos órgãos competentes para indicar a inadimplência/ não recebimento. <br>
+            <br>
+            <strong>Origem cliente:</strong> Defini de onde veio aquele cliente. <br>
+            <strong>Grupo empresarial:</strong> Define à qual grupo empresarial esse cliente pertence. <br>
+            <strong>Observações:</strong> Observações que serão mostradas no pré-faturamento. <br>
+            <strong>Reter "Impostos":</strong> Define os impostos que serão retidos no momento da geração da NF. <br>
+            <br>
+            <strong>Consultar cadastro:</strong> Irá mostrar a situação da empresa na SEFAZ. Se ela está habilitada, o número da inscrição estadual, etc. <br>
+            <strong>Exportar p/forn.:</strong> Irá duplicar o cadastro e enviar a cópia para o cadastro dos fornecedores. É usado quando o cliente também é um fornecedor.
+        </p>
+    </div>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img" src="../img/clientes-incluir-contatos.JPG" title="contatos">
+
+        <div>
+            <p class="desc-2"><strong>Contatos:</strong> Aqui ficarão todos os contatos vinculados ao cliente. Poderão ser acrescentados novos contatos para esse cliente por aqui ou pelo menu "contatos".</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img" src="../img/clientes-incluir-producao.JPG" title="produção">
+
+        <div>
+            <p class="desc-2"><strong>Produção:</strong> Aqui ficarão todos as Informações das O.S.. Todas as tabelas apresentadas aqui, são atalhos para agilizar o acesso aos menus respectivos. <br>
+                <strong>O.S. em produção:</strong> É o valor em R$ de todas as O.S.s emitidas por esse cliente que ainda não foram baixadas. <br>
+                <strong>O.S. concluída:</strong> É o valor em R$ de todas as O.S.s emitidas por esse cliente que já foram baixadas.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img" src="../img/clientes-incluir-financeiro.JPG" title="financeiro">
+
+        <div>
+            <p class="desc-2"><strong>Financeiro:</strong> Aqui ficarão todos as Informações financeiras. Todas as tabelas apresentadas aqui, são atalhos para agilizar o acesso aos menus respectivos. <br>
+                <strong>CR em atraso:</strong> São as contas a receber atrasadas. <br>
+                <strong>CR a vencer:</strong> São as contas a receber que não foram pagas, mas que ainda não venceram. <br>
+                <strong>CR aberto:</strong> (CR em atraso + CR a vencer). <br>
+                <strong>CR liquidado:</strong> São todas a contas a receber que foram pagas. <br>
+                <strong>CR total:</strong> (CR aberto + CR liquidado). <br>
+                <strong>Atraso médio:</strong> Atraso médio do cliente. Será considerado no orçamento caso seja enviado através do menu F11. <br>
+                <strong>Adiantam.livre:</strong> É o adiantamento liberado ao cliente que ainda não foi usado. <br>
+                <br>
+                <span class="material-symbols-outlined" style="color: goldenrod;">grade</span> Caso algum campo de totais não esteja apresentando valores, provavelmente o valor ultrapassou o máximo de caracteres aceitos pelo campo. Essa informação continuará disponível no respectivo menu.
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img" src="../img/clientes-incluir-estoque.JPG" title="estoque">
+
+        <div>
+            <p class="desc-2"><strong>Estoque:</strong> Aqui ficarão todos as Informações do estoque. Todas as tabelas apresentadas aqui, são atalhos para agilizar o acesso aos menus respectivos. Funciona da mesma forma das abas anteriores. <br>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img" src="../img/clientes-incluir-crm.JPG" title="CRM">
+
+        <div>
+            <p class="desc-2"><strong>CRM/Não cf:</strong> Aqui ficarão todos as Informações do CRM. Todas as tabelas apresentadas aqui, são atalhos para agilizar o acesso aos menus respectivos. <br>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="main-2">
+        <img class="img" src="../img/clientes-incluir-agenda.JPG" title="agenda">
+
+        <div>
+            <p class="desc-2"><strong>Agenda:</strong> Aqui ficarão todos as Informações da agenda. <br>
+                <strong>Empresa ou local:</strong> Relaciona o lembrete a algum cliente. <br>
+                <strong>Agenda para usuário:</strong> Indica para qual usuário é o lembrete.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
