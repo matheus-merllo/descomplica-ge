@@ -151,9 +151,20 @@
 
     <hr>
 
+    <strong> <center>Criar acesso GeWeb:</center> </strong>
+    <article>
+        <p class="info">
+            1 - Acessar 'www.zsl.com.br/geweb'
+            2 - Instale o plugin, baixe o atalho e coloque na área de trabalho.
+        </p>
+    </article>
+
+    <hr>
+
     <strong> <center>NFe</center> </strong>
     <article>
         <p class="info">
+            Código para acessar as opções da internet: 'inetcpl.cpl' <br>
             (Pesquisar no Windows > opções da internet > conteúdo > Limpar estado SSL) Limpa os caches da máquina. É usado para tentar resolver envio de NFs <br>
             (Pesquisar no Windows > opções da internet > Avançado > Limpar estado SSL) > “marque as opções” Usar SSL 3.0 e TLS 1.1, 1.2… Quanto mais recentes melhor! <br>
         </p>
@@ -165,6 +176,66 @@
     <article>
         <p class="info">
             Cole o arquivo "encerrar GE.bat" e execute para fechar todos os GE's abertos
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Guia de Instalação GE (local)</center> </strong>
+    <article>
+        <p class="info">
+            1 - Localize o sistema do cliente que estará no T:\Gráfica\Implantar\CODIGO. Zipe a pasta do GE do cliente na rede da Zênite, exclua do arquivo já zipado os Executáveis e a Pasta CEP. <br>
+            <br>
+            2 - No servidor do cliente, crie uma pasta Zênite no disco local onde o sistema será instalado conforme definido pelo cliente. <br>
+            <br>
+            3 - Transferir o arquivo zipado que contêm a base de dados para um disco local do servidor, dentro da pasta Zenite. <br>
+            <br>
+            4 - Em seguida extraia a base de dados de forma que o caminho para que os arquivos fiquem por exemplo C\Zenite\GE. <br>
+            <br>
+            5 - Faça os downloads dos seguintes arquivos, extraia (se necessário) e salve-os dentro da pasta GE. <br>
+            <span style="margin-left: 30px;"></span> a - Aplicativo do Backup: www.zsl.com.br/baixar/pkzipc <br>
+            <span style="margin-left: 30px;"></span> b - Executável do GE: www.zsl.com.br/baixar/geupd <br>
+            <span style="margin-left: 30px;"></span> c - Aplicativo auxiliar GE: www.zsl.com.br/baixar/zupd <br>
+            <span style="margin-left: 60px;"></span> I - Clique com o botão direito do mouse em Prioridades > Aba Compatibilidade, marque a opção de Executar como Administrador. <br>
+            <span style="margin-left: 60px;"></span> II - Crie um atalho dele na área de trabalho apenas do servidor. <br>
+            <span style="margin-left: 60px;"></span> III - Colocar no inicializador automático do Windows. <br>
+            <span style="margin-left: 30px;"></span> d - Solicite a gerência que gere o arquivo ZSL do cliente e salve na pasta do GE; <br>
+            <br>
+            6 - Colocar a pasta de CEP e JPG; <br>
+            <br>
+            7 - Efetue as configurações de compartilhamento da pasta Zenite. <br>
+            <span style="margin-left: 30px;"></span> a - Com a pasta Zenite selecionada, acesse as Opções de Pasta (disponível geralmente no menu Ferramentas) > Aba Modo Exibição > Desmarque a opção “Usar Assistente de Compartilhamento (Recomendado)”. > Aplicar > OK. <br>
+            <span style="margin-left: 30px;"></span> b - Clique com o botão direito do mouse na pasta Zenite > Propriedades > Compartilhalhamento >  Compartilhamento Avançado > Marcar Opção Compartilhar Pasta <br>
+            <span style="margin-left: 60px;"></span> I - Clique no botão Cache. Marque a opção “Nenhum arquivo ou programa da pasta compartilhada fica disponível off-line”. > Clique em OK. <br>
+            <span style="margin-left: 60px;"></span> II - Clique no botão Permissões e adicione os usuários TODOS e CONVIDADO com todas as permissões possíveis. Ao fazer isso clique em Aplicar e OK (bis). “Se não aparecer compartilhamento avançado o botão de compartilhamento não foi desmarcado.” <br>
+            <br>
+            <span style="margin-left: 30px;"></span> c - Terminada as configurações na aba Compartilhamento, clique na aba Segurança > Botão Editar > Adicione nesta lista de <br> <span style="margin-left: 60px;"></span> I - usuários os usuários TODOS e CONVIDADO com todas as permissões possíveis. Ao fazer isso, clique em Aplicar e OK (bis). <br>
+            Clique com o botão direito do mouse sobre a pasta Zenite > Prioridades > Aba Compartilhamento > Compartilhamento Avançado > Marcar checkbox Compartilhar a pasta > Cache > Marcar opção: Nenhum arquivo ou programa da pasta compartilhada fica disponível offline > Permissões >
+            Adicionar > Avançado > Localizar Agora > Double clique > Ok <br>
+            <span style="margin-left: 30px;"></span> d - Compartilhamento configurado com sucesso.
+            <br>
+            8 - Configure uma execução para o GE no Firewall do Windows. <br>
+            <span style="margin-left: 30px;"></span> a - Na barra de pesquisa do Windows ou no painel de controle, localize a opção Firewall do Windows com segurança avançada. <br>
+            <span style="margin-left: 30px;"></span> b - Em Regras de Entrada, crie uma nova regra para um programa específico. Selecione o GE no caminho original que ele está instalado (não use o atalho da área de trabalho) e permita o acesso a todas as conexões. Em seguida, será preciso informar o nome da regra: digite “Sistema GE” > Concluir. <br>
+            <span style="margin-left: 30px;"></span> c - Repita o mesmo processo acima nas Regras de Saída. <br>
+            9 - Caso a máquina tenha algum antivírus e você consiga acessar as configurações do mesmo é necessário colocar a pasta Zenite e o GE na(s) lista(s) de exeção(ões) do mesmo. Como cada antivírus pode ter um diferente, tente descobrir onde é. Obs.: Caso não consiga, solicite que o cliente peça auxílio da parte de TI para tal configuração. <br>
+            <br>
+            10 - Configure o UAC (Controle de Conta de Usuário) para o menor nível. Digite na barra de pesquisa do Windows “UAC” + Enter para ter acesso à tela com o nível. <br>
+            <br>
+            11 - Para que o GE abra automaticamente, o caso de a máquina ser reiniciada, preciso adicionar o aplicativo ZUPD no Inicializar do Windows. <br>
+            Na barra de pesquisa do Windows, digite “%appdata%” + Enter. <br>
+            <span style="margin-left: 30px;"></span> a - Abra as pastas Microsoft > Windows > Menu Iniciar (ou Menu Inicializar ou Start Menu) > Programas > Iniciar (inicializar ou Startup). <br>
+            <span style="margin-left: 30px;"></span> b - Exemplo do caminho para Windows Server: "%appdata%\microsoft\windows\start menu\ programs\startup" <br>
+            <span style="margin-left: 30px;"></span> c - Clique com o botão direito do mouse sem ser em um item específico > Novo > Atalho > Procure o ZUPD no caminho original do GE (Ex.: C:\Zenite\Ge\Zupd.exe) <br>
+            <span style="margin-left: 30px;"></span> d - Conclua o assistente de criação do atalho aparecendo na pasta Inicializar. <br>
+            <br>
+            12 - Execute o aplicativo ZUPD e aguarde o GE ser executado. Verifique se o GE está amarelo ou apresenta normalidade quanto à conexão. <br>
+            <br>
+            13 - Com o sistema em execução no servidor, é necessário mapear a pasta Zenite nas estações para que os usuários tenham acesso à ferramenta. <br>
+            <span style="margin-left: 30px;"></span> a - No computador estação, acesse o Windows Explorer (Meu Computador) > Localize a opção Mapear unidade de rede > Abrirá uma tela com uma letra (geralmente usamos a Z:) > Clique no botão Procurar > Localize o Servidor e a pasta Zenite > Clique uma vez na pasta Zenite > OK > Concluir. <br>
+            <span style="margin-left: 30px;"></span> b - Feito isso o Windows abrirá a tela com a pasta GE disponível. Acesse a pasta e crie um atalho do GE na área de trabalho. <br>
+            <span style="margin-left: 30px;"></span> c - Tente abrir o GE na estação e verifique se o GE está amarelo ou apresenta normalidade quanto à conexão com o servidor. <br> 
+            <span style="margin-left: 30px;"></span> d - Registre as chaves de registro também na estação, verifique o antivírus e arquivos off-line. “UAC também”. <br>
         </p>
     </article>
 
