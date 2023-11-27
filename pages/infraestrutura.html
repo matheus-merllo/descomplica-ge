@@ -16,6 +16,24 @@
         <span class="header-title">Infraestrutura</span>
     </header>
 
+    <strong> <center>Geral</center> </strong>
+    <article>
+        <p class="info"> 
+            <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Problemas de restauração do backup em estações do sistema. Podem ser resolvidos substituindo o executável do sistema na pasta do servidor.
+        </p>
+    </article>
+
+    <hr>
+
+    <strong> <center>Falha na conexão com o servidor</center> </strong>
+    <article>
+        <p class="info"> 
+            Quando uma estação é iniciada antes do servidor ser ligado, dentro da pasta do sistema será gerado um arquivo chamado “GE.INI” que conterá as informações do Server.Port e do IP que o sistema está aberto. Neste caso, o sistema da estação e o servidor deverão ser fechados e o arquivo “GE.INI” deverá ser excluído. Após isso, basta abrir o servidor normalmente. Essa falha também pode ser causada pelo antivírus e/ou o firewall do Windows. <br>
+        </p>
+    </article>
+
+    <hr>
+
     <strong> <center>Servidor web</center> </strong>
     <article>
         <p class="info"> 
@@ -208,16 +226,16 @@
             <span style="margin-left: 30px;"></span> b - Clique com o botão direito do mouse na pasta Zenite > Propriedades > Compartilhalhamento >  Compartilhamento Avançado > Marcar Opção Compartilhar Pasta <br>
             <span style="margin-left: 60px;"></span> I - Clique no botão Cache. Marque a opção “Nenhum arquivo ou programa da pasta compartilhada fica disponível off-line”. > Clique em OK. <br>
             <span style="margin-left: 60px;"></span> II - Clique no botão Permissões e adicione os usuários TODOS e CONVIDADO com todas as permissões possíveis. Ao fazer isso clique em Aplicar e OK (bis). “Se não aparecer compartilhamento avançado o botão de compartilhamento não foi desmarcado.” <br>
-            <br>
             <span style="margin-left: 30px;"></span> c - Terminada as configurações na aba Compartilhamento, clique na aba Segurança > Botão Editar > Adicione nesta lista de <br> <span style="margin-left: 60px;"></span> I - usuários os usuários TODOS e CONVIDADO com todas as permissões possíveis. Ao fazer isso, clique em Aplicar e OK (bis). <br>
             Clique com o botão direito do mouse sobre a pasta Zenite > Prioridades > Aba Compartilhamento > Compartilhamento Avançado > Marcar checkbox Compartilhar a pasta > Cache > Marcar opção: Nenhum arquivo ou programa da pasta compartilhada fica disponível offline > Permissões >
             Adicionar > Avançado > Localizar Agora > Double clique > Ok <br>
-            <span style="margin-left: 30px;"></span> d - Compartilhamento configurado com sucesso.
+            <span style="margin-left: 30px;"></span> d - Compartilhamento configurado com sucesso. <br>
             <br>
             8 - Configure uma execução para o GE no Firewall do Windows. <br>
             <span style="margin-left: 30px;"></span> a - Na barra de pesquisa do Windows ou no painel de controle, localize a opção Firewall do Windows com segurança avançada. <br>
             <span style="margin-left: 30px;"></span> b - Em Regras de Entrada, crie uma nova regra para um programa específico. Selecione o GE no caminho original que ele está instalado (não use o atalho da área de trabalho) e permita o acesso a todas as conexões. Em seguida, será preciso informar o nome da regra: digite “Sistema GE” > Concluir. <br>
             <span style="margin-left: 30px;"></span> c - Repita o mesmo processo acima nas Regras de Saída. <br>
+            <br>
             9 - Caso a máquina tenha algum antivírus e você consiga acessar as configurações do mesmo é necessário colocar a pasta Zenite e o GE na(s) lista(s) de exeção(ões) do mesmo. Como cada antivírus pode ter um diferente, tente descobrir onde é. Obs.: Caso não consiga, solicite que o cliente peça auxílio da parte de TI para tal configuração. <br>
             <br>
             10 - Configure o UAC (Controle de Conta de Usuário) para o menor nível. Digite na barra de pesquisa do Windows “UAC” + Enter para ter acesso à tela com o nível. <br>
