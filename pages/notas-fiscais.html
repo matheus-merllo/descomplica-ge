@@ -25,6 +25,26 @@
 
     <hr>
     
+    <center><strong>Alíquota ICMS</strong></center><br>
+    <div>
+        <p class="desc-2">
+            As alíquotas de ICMS de vendas feitas dentro do próprio estado variam entre 12% e 20%. Já o ICMS interestadual será de 4%, 7% ou 12%.
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>Erro “GTIN” Nfe</strong></center><br>
+    <div>
+        <p class="desc-2">
+            O erro GTIN é genérico e pode ser causado pelo campo “Contrib.ICM” (cadastro do cliente) ou “Consumidor” (campo na NFe). <br>
+            Xsd: A pasta “xsd” contêm os links e endereços das notas enviadas por cidade. Ela fica dentro da pasta das NFes.
+            Caso o erro persista, a pasta “xsd” deverá ser excluída do computador. Gere a XML da nota novamente para baixar a pasta e tente enviar a NF.
+        </p>
+    </div>
+
+    <hr>
+
     <center><strong>NF - simples nacional</strong></center><br>
     <div>
         <p class="desc-2">
@@ -33,6 +53,26 @@
             Será criado um campo "%Cr.ICM SN" no cadastro da NF. <br>
                 (CADASTROS > CONFIGURAÇÕES GERAIS > NFE > "%Cr.ICM SN" E "MENSAGEM CRÉDITO ICMS SIMPLES")  <br>
             Para devoluções de empresas do simples deve ser informado o csosn 900-Outros (Definido pela contabilidade) <br>
+        </p>
+    </div>
+
+    <hr>
+
+    <center><strong>Limite de itens/caracteres em NFSe</strong></center><br>
+    <div>
+        <p class="desc-2">
+            As notas municipais (NFSes) tem um limite de caracteres nos itens. Ao ultrapassar esse limite, a nota retornará um erro na descrição dos itens. Normalmente, o limite é de 2000 caracteres, mas essa informação deverá ser fornecida pela contabilidade ou pela própria prefeitura.
+        </p>
+    </div>
+
+    <hr>
+    
+    <center><strong>Emissão padrão de NFe</strong></center><br>
+    <div>
+        <p class="desc-2">
+            O procedimento correto na emissão das NFs é: <br>
+            Somente baixar as OSs para o pré-faturamento quando elas, de fato, forem ser baixadas. As NFs não devem ficar no pré-faturamento por longos períodos. <br>
+            Após emitir uma NF, não é indicado que ela fique por longos períodos em espera, pois após a emissão de 100 NFs posteriores às NFs em espera, não será mais possível enviar essas notas. Nesse caso, elas precisarão ser canceladas e a numeração deverá ser inutilizada (caso tenha alguma emissão de NF pela mesma empresa) <br>
         </p>
     </div>
 
@@ -72,7 +112,7 @@
     <article>
         <p class="desc">
             <strong>Enviar XMLs contabilidade:</strong>É usado para enviar as XMLs para a contabilidade, normalmente 1 vez por mês. Só enviará notas estaduais.
-            <strong>Inutilizar numeração NFe:</strong>É usada para inutilizar o número da nota junto a SEFAZ.  <br>
+            <strong>Inutilizar numeração NFe:</strong>É usada para inutilizar o número da nota junto a SEFAZ. Para inutilizar uma numeração de NF, a NF deve ser excluída primeiro <br>
             <strong>Arquivo de itens da NF:</strong>É muito usada em relatórios que evolvam os itens das NFs. <br>
             <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Os relatórios gerados diretamente pelo menu de NF só poderá usar campos do cabeçalho e das abas. <br>
             <strong>Inconsistência NF x CR:</strong>Irá mostrar se existem inconsistências entre as NFs e o CR. Qualquer Nota que tenha sido cobrada do cliente e não tenha sido gerado um contas a receber, aparecerá nesse menu. A NF precisa estar processada para aparecer nesse relatório. <br> 
@@ -216,7 +256,7 @@
             <br> 
             <span class="material-symbols-outlined" style="color: goldenrod; margin-left: 20px;">grade</span> Nota complementar, ajuste ou devolução precisarão de uma NF relacionada. <br>
             <strong>Ind. presença:</strong>Justifica como aconteceu a venda, se pela internet, ou presencialmente. <br> 
-            <strong>Consumidor:</strong>Indica se é uma NF para consumidor final ou não. <br> 
+            <strong>Consumidor:</strong>Normal (É contribuinte de ICMS) | Final (Não é contribuinte de ICMS)<br> 
             <strong>Cliente:</strong>Indica o cliente da NF. <br> 
             <strong>N°pedido cli.:</strong>Número do pedido do cliente é o número da ordem de compra do cliente. <br> 
             <strong>T.Cobrança:</strong>(CADASTROS > CONFIGURAÇÕES GERAIS > FINANCEIRO > "TIPO COBRANÇA"). Também Pode ser padronizada no cadastro do cliente. <br> 
